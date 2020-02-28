@@ -1,0 +1,56 @@
+
+*** Running vivado
+    with args -log VGA_RGB_Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source VGA_RGB_Top.tcl -notrace
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source VGA_RGB_Top.tcl -notrace
+Command: link_design -top VGA_RGB_Top -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 620.484 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc]
+WARNING: [Vivado 12-584] No ports matched 'RST'. [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 741.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 745.320 ; gain = 434.160
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u3/<const0> has multiple drivers: u3/addr_reg_reg/DOADO[0], and u3/GND/G.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u3/out[0] has multiple drivers: u3/addr_reg_reg/DOADO[4], and Inst_vga_controller/g31_b4/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u3/out[1] has multiple drivers: u3/addr_reg_reg/DOADO[3], u3/addr_reg_reg/DOADO[5], and Inst_vga_controller/g31_b5/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u3/out[2] has multiple drivers: u3/addr_reg_reg/DOADO[2], u3/addr_reg_reg/DOADO[6], and Inst_vga_controller/g31_b6/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u3/out[3] has multiple drivers: u3/addr_reg_reg/DOADO[1], u3/addr_reg_reg/DOADO[7], and Inst_vga_controller/g31_b7/O.
+INFO: [Project 1-461] DRC finished with 5 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.763 . Memory (MB): peak = 762.262 ; gain = 16.941
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 1 Warnings, 1 Critical Warnings and 6 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 27 15:57:16 2020...

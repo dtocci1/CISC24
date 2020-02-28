@@ -1,0 +1,434 @@
+
+*** Running vivado
+    with args -log VGA_RGB_Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA_RGB_Top.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source VGA_RGB_Top.tcl -notrace
+Command: synth_design -top VGA_RGB_Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7560 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 853.270 ; gain = 235.754
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_Sync.vhd:108]
+WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_Sync.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'VGA_RGB_Top' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_RGB_Top.vhd:20]
+WARNING: [Synth 8-5640] Port 'clk' is missing in component declaration [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_RGB_Top.vhd:21]
+INFO: [Synth 8-3491] module 'vga_controller' declared at 'C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_Sync.vhd:18' bound to instance 'Inst_vga_controller' of component 'vga_controller' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_RGB_Top.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'vga_controller' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_Sync.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'vga_controller' (1#1) [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_Sync.vhd:29]
+INFO: [Synth 8-3491] module 'ps2Controller' declared at 'C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/ps2Controller.vhd:16' bound to instance 'u1' of component 'ps2Controller' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_RGB_Top.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'ps2Controller' [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/ps2Controller.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ps2Controller' (2#1) [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/ps2Controller.vhd:24]
+INFO: [Synth 8-3491] module 'ScanToAscii' declared at 'C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/ScanToAscii.vhd:15' bound to instance 'u2' of component 'ScanToAscii' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_RGB_Top.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'ScanToAscii' [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/ScanToAscii.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'ScanToAscii' (3#1) [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/ScanToAscii.vhd:21]
+INFO: [Synth 8-3491] module 'FONT_ROM' declared at 'C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:21' bound to instance 'u3' of component 'FONT_ROM' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_RGB_Top.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'FONT_ROM' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'FONT_ROM' (4#1) [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:28]
+WARNING: [Synth 8-3848] Net output in module/entity VGA_RGB_Top does not have driver. [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_RGB_Top.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'VGA_RGB_Top' (5#1) [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/VGA_RGB_Top.vhd:20]
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaRed[3] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaRed[2] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaRed[1] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaRed[0] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaBlue[3] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaBlue[2] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaBlue[1] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaBlue[0] driven by constant 0
+WARNING: [Synth 8-3331] design vga_controller has unconnected port CLK
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[7]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[6]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[5]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[4]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[3]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[2]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[1]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 922.441 ; gain = 304.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 926.270 ; gain = 308.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 926.270 ; gain = 308.754
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 926.270 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc]
+WARNING: [Vivado 12-584] No ports matched 'RST'. [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/Keyboard.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGA_RGB_Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/VGA_RGB_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1039.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1039.520 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ps2Controller'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "keycode" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "convert" is below threshold of ROM address width. It will be mapped to LUTs
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 s_start |                      00000000001 |                             0000
+                    s_d0 |                      00000000010 |                             0001
+                    s_d1 |                      00000000100 |                             0010
+                    s_d2 |                      00000001000 |                             0011
+                    s_d3 |                      00000010000 |                             0100
+                    s_d4 |                      00000100000 |                             0101
+                    s_d5 |                      00001000000 |                             0110
+                    s_d6 |                      00010000000 |                             0111
+                    s_d7 |                      00100000000 |                             1000
+                s_parity |                      01000000000 |                             1001
+                  s_stop |                      10000000000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ps2Controller'
+WARNING: [Synth 8-327] inferring latch for variable 'keycode_reg' [C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 3 - Feb 12 - 2020/Keyboard/ps2Controller.vhd:67]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  27 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module VGA_RGB_Top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module vga_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ps2Controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      1 Bit        Muxes := 1     
+Module ScanToAscii 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  27 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+Module FONT_ROM 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5587] ROM size for "u2/convert" is below threshold of ROM address width. It will be mapped to LUTs
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaRed[3] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaRed[2] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaRed[1] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaRed[0] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaBlue[3] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaBlue[2] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaBlue[1] driven by constant 0
+WARNING: [Synth 8-3917] design VGA_RGB_Top has port vgaBlue[0] driven by constant 0
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[7]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[6]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[5]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[4]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[3]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[2]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[1]
+WARNING: [Synth 8-3331] design VGA_RGB_Top has unconnected port sw[0]
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[10]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[9]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[8]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[7]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[6]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[5]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[4]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[3]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[2]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[1]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/FSM_onehot_state_reg[0]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/keycode_reg[7]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/keycode_reg[6]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/keycode_reg[5]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/keycode_reg[4]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/keycode_reg[3]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/keycode_reg[2]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/keycode_reg[1]) is unused and will be removed from module VGA_RGB_Top.
+WARNING: [Synth 8-3332] Sequential element (u1/keycode_reg[0]) is unused and will be removed from module VGA_RGB_Top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|FONT_ROM    | ROM[0]     | 2048x8        | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7053] The timing for the instance u3/addr_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[4] with 1st driver pin 'u3/addr_reg_reg/DOADO[4]' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[4] with 2nd driver pin 'g31_b4/O' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2261]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[3] with 1st driver pin 'u3/addr_reg_reg/DOADO[3]' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[3] with 2nd driver pin 'u3/addr_reg_reg/DOADO[5]' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[3] with 3rd driver pin 'g31_b5/O' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2261]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[2] with 1st driver pin 'u3/addr_reg_reg/DOADO[2]' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[2] with 2nd driver pin 'u3/addr_reg_reg/DOADO[6]' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[2] with 3rd driver pin 'g31_b6/O' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2261]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[1] with 1st driver pin 'u3/addr_reg_reg/DOADO[1]' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[1] with 2nd driver pin 'u3/addr_reg_reg/DOADO[7]' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin letterByte[1] with 3rd driver pin 'g31_b7/O' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2261]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[0] with 1st driver pin 'u3/addr_reg_reg/DOADO[0]' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[0] with 2nd driver pin 'GND' [C:/Users/julia/vga_part1/vga_part1.srcs/sources_1/imports/VGA/FontRom.vhd:2257]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        5|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |LUT1     |     3|
+|3     |LUT2     |     5|
+|4     |LUT3     |     4|
+|5     |LUT4     |    11|
+|6     |LUT5     |    12|
+|7     |LUT6     |    19|
+|8     |RAMB18E1 |     1|
+|9     |FDRE     |    22|
+|10    |IBUF     |     1|
+|11    |OBUF     |    24|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------+---------------+------+
+|      |Instance              |Module         |Cells |
++------+----------------------+---------------+------+
+|1     |top                   |               |   103|
+|2     |  Inst_vga_controller |vga_controller |    72|
+|3     |  u3                  |FONT_ROM       |     1|
++------+----------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1039.520 ; gain = 422.004
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 13 critical warnings and 36 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1039.520 ; gain = 308.754
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1039.520 ; gain = 422.004
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1044.039 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1050.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 58 Warnings, 14 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1050.184 ; gain = 744.273
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1050.184 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/julia/experiment/experiment.runs/synth_1/VGA_RGB_Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file VGA_RGB_Top_utilization_synth.rpt -pb VGA_RGB_Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 27 15:56:46 2020...
