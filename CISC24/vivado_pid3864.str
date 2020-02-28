@@ -166,3 +166,10 @@ selectCodeEditor("TopLevel.vhd", 322, 393); // ch (w, cr)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_GRAPH_STALE
+// Elapsed time: 27 seconds
+selectCodeEditor("TopLevel.vhd", 1262, 123); // ch (w, cr)
+// Elapsed time: 395 seconds
+closeMainWindow("CISC24 - [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.xpr] - Vivado 2019.2"); // cr
+// A (cr): Exit Vivado: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Exit Vivado"); // A (cr)
