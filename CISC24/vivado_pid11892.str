@@ -1,0 +1,865 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 11892
+License: Customer
+
+Current time: 	Wed Mar 04 09:25:19 EST 2020
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Available disk space: 254 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	julia
+User home directory: C:/Users/julia
+User working directory: C:/Users/julia/Documents/Julia Docs/CISC24/CISC24
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/julia/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/julia/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/julia/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/vivado.log
+Vivado journal file location: 	C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/vivado.jou
+Engine tmp dir: 	C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/.Xil/Vivado-11892-DESKTOP-U27BNUF
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 649 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\julia\Documents\Julia Docs\CISC24\CISC24\CISC24.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 91 MB (+93424kb) [00:00:14]
+// [Engine Memory]: 680 MB (+561748kb) [00:00:14]
+// [GUI Memory]: 104 MB (+8288kb) [00:00:15]
+// [GUI Memory]: 116 MB (+6983kb) [00:00:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  3673 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 690 MB. GUI used memory: 56 MB. Current time: 3/4/20, 9:25:25 AM EST
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 709.680 ; gain = 97.781 
+// Project name: CISC24; location: C:/Users/julia/Documents/Julia Docs/CISC24/CISC24; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bB (cr)
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (TopLevel.vhd) elapsed time: 0.2s
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel(Behavioral) (TopLevel.vhd)]", 1, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel(Behavioral) (TopLevel.vhd)]", 1, false, false, false, false, false, true); // B (F, cr) - Double Click
+// [Engine Memory]: 730 MB (+16262kb) [00:00:30]
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // E (f, c)
+// HMemoryUtils.trashcanNow. Engine heap size: 749 MB. GUI used memory: 59 MB. Current time: 3/4/20, 9:25:41 AM EST
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ai (ao, c)
+setFileChooser("C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 1 - January 29 2020/sources/D_FlipFlop.vhd");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -norecurse {{C:/Users/julia/Documents/Julia Docs/ECE-368/laboratory notes/Lab 1 - January 29 2020/sources/D_FlipFlop.vhd}} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 777 MB (+11198kb) [00:00:45]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, D_FlipFlop.vhd]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, D_FlipFlop.vhd]", 2, false); // B (F, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 777 MB. GUI used memory: 59 MB. Current time: 3/4/20, 9:25:56 AM EST
+// Elapsed time: 14 seconds
+selectCodeEditor("TopLevel.vhd", 242, 340); // ch (w, cr)
+selectCodeEditor("TopLevel.vhd", 292, 283); // ch (w, cr)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 13 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "regBank"); // ac (Q, F)
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "VHDL", 3); // cm (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+// Elapsed time: 39 seconds
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 66 seconds
+dismissDialog("Add Sources"); // c (cr)
+// Tcl Message: close [ open {C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd}} 
+// I (cr): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("regBank.vhd", 198, 245); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 214, 197); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, D_FlipFlop.vhd]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, D_FlipFlop.vhd]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("D_FlipFlop.vhd", 218, 165); // ch (w, cr)
+selectCodeEditor("D_FlipFlop.vhd", 240, 164); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, D_FlipFlop.vhd]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("regBank.vhd", 14, 145); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 33, 155); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("regBank.vhd", 108, 175); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 626, 189); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 611, 151); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 590, 197); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 584, 172); // ch (w, cr)
+// Elapsed time: 45 seconds
+selectCodeEditor("regBank.vhd", 516, 241); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 530, 229); // ch (w, cr)
+// Elapsed time: 52 seconds
+selectCodeEditor("regBank.vhd", 282, 331); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 221, 256); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 225, 280); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel(Behavioral) (TopLevel.vhd)]", 1, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel(Behavioral) (TopLevel.vhd)]", 1, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("TopLevel.vhd", 724, 259); // ch (w, cr)
+selectCodeEditor("TopLevel.vhd", 724, 259, false, false, false, false, true); // ch (w, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, D_Flipflop(Behavioral) (D_FlipFlop.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, D_Flipflop(Behavioral) (D_FlipFlop.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("D_FlipFlop.vhd", 232, 106); // ch (w, cr)
+selectCodeEditor("D_FlipFlop.vhd", 376, 314); // ch (w, cr)
+selectCodeEditor("D_FlipFlop.vhd", 378, 285); // ch (w, cr)
+selectCodeEditor("D_FlipFlop.vhd", 364, 312); // ch (w, cr)
+// Elapsed time: 124 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 2); // i (h, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "reg_8bit"); // ac (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "reg_24bit"); // ac (Q, F)
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "VHDL", 3); // cm (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 23 seconds
+dismissDialog("Add Sources"); // c (cr)
+// Tcl Message: close [ open {C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd}} 
+// I (cr): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 38 seconds
+selectCodeEditor("reg_24bit.vhd", 168, 282); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 38, 277); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("reg_24bit.vhd", 42, 279); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 14, 284); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, D_Flipflop(Behavioral) (D_FlipFlop.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, D_Flipflop(Behavioral) (D_FlipFlop.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, D_Flipflop(Behavioral) (D_FlipFlop.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("D_FlipFlop.vhd", 201, 215); // ch (w, cr)
+selectCodeEditor("D_FlipFlop.vhd", 201, 215); // ch (w, cr)
+selectCodeEditor("D_FlipFlop.vhd", 174, 194); // ch (w, cr)
+selectCodeEditor("D_FlipFlop.vhd", 241, 175, false, false, false, true, false); // ch (w, cr) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ai (ao, Popup.HeavyWeightWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, reg_24bit(Behavioral) (reg_24bit.vhd)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("reg_24bit.vhd", 201, 182); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 180, 211); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 150, 198); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 22, 248); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 26, 248); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 27, 247); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 27, 247, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("reg_24bit.vhd", 172, 211); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 87, 198); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 93, 197); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 105, 179); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 84, 195); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 79, 199); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 80, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 80, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 87, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 88, 202, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("reg_24bit.vhd", 93, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 97, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 98, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 98, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 98, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 208, 279); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 97, 58); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 64, 29); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 83, 29); // ch (w, cr)
+// Elapsed time: 73 seconds
+selectCodeEditor("reg_24bit.vhd", 187, 278); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 62, 241); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 148, 196); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 169, 303); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 1, 200); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 106, 330); // ch (w, cr)
+// Elapsed time: 31 seconds
+selectCodeEditor("reg_24bit.vhd", 81, 278); // ch (w, cr)
+// Elapsed time: 85 seconds
+selectCodeEditor("reg_24bit.vhd", 194, 233); // ch (w, cr)
+// Elapsed time: 86 seconds
+selectCodeEditor("reg_24bit.vhd", 394, 99); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("reg_24bit.vhd", 161, 284); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 194, 281); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 192, 285); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 17, 288); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 111, 323); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 125, 356); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 160, 315); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 151, 308); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 17, 286); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 116, 324); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 127, 346); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 169, 300); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 4, 299); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 15, 289); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 111, 324); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 125, 353); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 7, 283); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 15, 286); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 120, 333); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 123, 344); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 98, 302); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 116, 328); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 126, 350); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 15, 290); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 171, 303); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 20, 305); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 7, 306); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 14, 312); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 12, 286); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 119, 326); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 122, 347); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 14, 249); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 10, 239); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 118, 285); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 126, 305); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 36, 330); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 4, 325); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 18, 283); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 120, 331); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 121, 350); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 86, 298); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 5, 273); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 0, 279); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 14, 286); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 115, 334); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 122, 347); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 21, 314); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 2, 304); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 16, 293); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 115, 334); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 127, 355); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 130, 307); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 242, 305); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 4, 332); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 20, 282); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 112, 332); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 487, 352); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 0, 302); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 26, 294); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 21, 291); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "reg_24bit.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("reg_24bit.vhd", 175, 284); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 200, 257); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 162, 310); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 220, 277); // ch (w, cr)
+// Elapsed time: 30 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 10 seconds
+selectCodeEditor("reg_24bit.vhd", 401, 288); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 804 MB. GUI used memory: 64 MB. Current time: 3/4/20, 9:46:01 AM EST
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("reg_24bit.vhd", 59, 183); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 153, 206); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 2); // i (h, cr)
+selectCodeEditor("regBank.vhd", 84, 239); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 33, 225); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 33, 225, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("regBank.vhd", 108, 348); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 355, 332); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectCodeEditor("regBank.vhd", 216, 275); // ch (w, cr)
+// Elapsed time: 365 seconds
+selectCodeEditor("regBank.vhd", 559, 229); // ch (w, cr)
+// Elapsed time: 70 seconds
+selectCodeEditor("regBank.vhd", 140, 316); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 22, 312); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 0, 208); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 9, 218); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 103, 330); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 78, 278); // ch (w, cr)
+// Elapsed time: 136 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 4); // i (h, cr)
+selectCodeEditor("reg_24bit.vhd", 296, 186); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 206, 288); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 300, 248); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 358, 243); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 539, 273); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 594, 227); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 268, 202); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 253, 213); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 244, 219); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 502, 252); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 450, 349); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 431, 335); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 434, 340); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 342, 70); // ch (w, cr)
+// Elapsed time: 29 seconds
+selectCodeEditor("reg_24bit.vhd", 350, 204); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 352, 230); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 371, 223); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 323, 247); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 38, 214); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 56, 207); // ch (w, cr)
+// Elapsed time: 25 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 90 seconds
+selectCodeEditor("reg_24bit.vhd", 104, 219); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("reg_24bit.vhd", 758, 325); // ch (w, cr)
+// [GUI Memory]: 123 MB (+1127kb) [00:34:14]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("reg_24bit.vhd", 778, 285); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "D_FlipFlop.vhd", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+selectCodeEditor("regBank.vhd", 326, 262); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("regBank.vhd", 245, 252); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 217, 286); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("regBank.vhd", 645, 327); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 303, 246); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 303, 259); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 439, 331); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 261, 236); // ch (w, cr)
+// Elapsed time: 200 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "D_FlipFlop.vhd", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("regBank.vhd", 22, 332); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 47, 330); // ch (w, cr)
+// Elapsed time: 373 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("regBank.vhd", 241, 120); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 256, 133); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("regBank.vhd", 161, 306); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 171, 297); // ch (w, cr)
+// Elapsed time: 80 seconds
+selectCodeEditor("regBank.vhd", 334, 229); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 332, 266); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("regBank.vhd", 168, 280); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("regBank.vhd", 104, 145); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 176, 173); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 181, 214); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 174, 134); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 204, 88); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 152, 175); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 144, 162); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 745, 32); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 699, 330); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("regBank.vhd", 509, 28); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 25, 257); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("regBank.vhd", 22, 234); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 13, 222); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 206, 261); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 39, 183); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 94, 282); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 121, 289); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 58, 330); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("regBank.vhd", 234, 307); // ch (w, cr)
+// Elapsed time: 76 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 2); // i (h, cr)
+selectCodeEditor("reg_24bit.vhd", 483, 209); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 513, 162); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 516, 158); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 521, 130); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("reg_24bit.vhd", 492, 180); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 497, 211); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 326, 26); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 336, 64); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 341, 40); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 343, 55); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 475, 22); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 362, 248); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 377, 235); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 387, 206); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 364, 238); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 366, 233); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 365, 227); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 804 MB. GUI used memory: 59 MB. Current time: 3/4/20, 10:16:02 AM EST
+// Elapsed time: 25 seconds
+selectCodeEditor("reg_24bit.vhd", 382, 261); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 428, 287); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 183, 253); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 174, 291); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+selectCodeEditor("regBank.vhd", 368, 136); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("regBank.vhd", 445, 164); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 468, 153); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 484, 143); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("regBank.vhd", 487, 85); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 460, 116); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 467, 107); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 464, 98); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+selectCodeEditor("regBank.vhd", 490, 185); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 511, 167); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 459, 193); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 1, 236); // ch (w, cr)
+// Elapsed time: 57 seconds
+selectCodeEditor("regBank.vhd", 216, 303); // ch (w, cr)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 784, 192, false, false, false, true, false); // ch (w, cr) - Popup Trigger
+selectCodeEditor("regBank.vhd", 122, 279); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 200, 295); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 183 seconds
+selectCodeEditor("regBank.vhd", 26, 307); // ch (w, cr)
+// Elapsed time: 111 seconds
+selectCodeEditor("regBank.vhd", 244, 280); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 77, 268); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 70, 268); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 100, 268); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 254, 258); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 81, 260); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 97, 294); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 100, 274); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 42, 236); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 277, 269); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 260, 265); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 69, 278); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 63, 115); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 116, 123); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 114, 83); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 228, 97); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 226, 137); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 221, 177); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 229, 224); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 223, 196); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 231, 244); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 228, 284); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 111, 159); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 72, 202); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 107, 203); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 71, 244); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 100, 245); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 69, 183); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 97, 181); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 72, 231); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 37, 216); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 110, 222); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 74, 267); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 67, 303); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 540, 307); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 427, 224); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("regBank.vhd", 136, 54); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 170, 22); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("regBank.vhd", 147, 303); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 191, 308); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 164, 306); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 139, 44); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 150, 34); // ch (w, cr)
+// Elapsed time: 21 seconds
+selectCodeEditor("regBank.vhd", 130, 288); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 143, 252); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("regBank.vhd", 27, 238); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 206, 288); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 101, 218); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 137, 205); // ch (w, cr)
+// Elapsed time: 59 seconds
+selectCodeEditor("regBank.vhd", 148, 261); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 263, 289); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 36, 158); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 492, 352); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 71, 322); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("regBank.vhd", 569, 298); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 582, 273); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 412, 315); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 417, 305); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 423, 292); // ch (w, cr)
+// Elapsed time: 27 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("regBank.vhd", 365, 304); // ch (w, cr)
+// Elapsed time: 27 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("regBank.vhd", 176, 247, false, true, false, false, false); // ch (w, cr) - Control Key
+selectCodeEditor("regBank.vhd", 196, 194); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 60, 205); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 57, 221); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 84 seconds
+selectCodeEditor("regBank.vhd", 73, 54); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 149, 203); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 87, 240); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 128, 51); // ch (w, cr)
+// Elapsed time: 93 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, D_Flipflop(Behavioral) (D_FlipFlop.vhd)]", 10, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, D_Flipflop(Behavioral) (D_FlipFlop.vhd)]", 10, false, false, false, false, true, false); // B (F, cr) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, cr)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Remove Sources"); // aE (cr)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.srcs/sources_1/imports/sources/D_FlipFlop.vhd}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.srcs/sources_1/imports/sources/D_FlipFlop.vhd}} 
+// Elapsed time: 17 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cr)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // aa (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cr)
+selectCodeEditor("regBank.vhd", 460, 228); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 2); // i (h, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+selectCodeEditor("regBank.vhd", 239, 82); // ch (w, cr)
+// Elapsed time: 23 seconds
+selectCodeEditor("regBank.vhd", 120, 386); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 48, 410); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 67, 273); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 242, 263); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 242, 263, false, false, false, false, true); // ch (w, cr) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 2); // i (h, cr)
+selectCodeEditor("reg_24bit.vhd", 187, 347); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+selectCodeEditor("regBank.vhd", 240, 137); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 240, 137, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 238, 177); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 238, 177, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 241, 224); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 241, 224, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 213, 270); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 213, 270, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 203, 304); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 203, 304, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 210, 347); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 210, 347, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 208, 390); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 208, 390); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 208, 389); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 208, 389, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 12 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+selectMenuItem(RDIResourceCommand.RDICommands_UNDO, "Undo"); // ai (cr)
+selectMenuItem(RDIResourceCommand.RDICommands_UNDO, "Undo"); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+selectCodeEditor("regBank.vhd", 617, 148); // ch (w, cr)
+// k (cr): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (i, cr)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a (k)
+dismissDialog("Text Changed"); // k (cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("regBank.vhd", 125, 54); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 263, 121); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 263, 121, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 1); // i (h, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 349, 366); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 338, 353); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 336, 351, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("reg_24bit.vhd", 422, 353); // ch (w, cr)
+typeControlKey((HResource) null, "reg_24bit.vhd", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 3); // i (h, cr)
+selectCodeEditor("regBank.vhd", 271, 117); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 271, 117, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 266, 165); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 266, 165, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 251, 209); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 251, 209, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 247, 244); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 247, 244, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 245, 287); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 245, 287, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 244, 316); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 243, 330); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 243, 330, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 244, 369); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 244, 369, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 243, 416); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 243, 416, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 512, 116); // ch (w, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("regBank.vhd", 174, 176); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 61, 136); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 1); // i (h, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("reg_24bit.vhd", 426, 371); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 457, 350); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 410, 365); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 497, 424); // ch (w, cr)
+selectCodeEditor("reg_24bit.vhd", 328, 399); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 3); // i (h, cr)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectCodeEditor("regBank.vhd", 168, 347); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 78, 359); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 76, 356); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 255, 342); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 2); // i (h, cr)
+selectCodeEditor("regBank.vhd", 192, 93); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 2); // i (h, cr)
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_24bit.vhd", 1); // i (h, cr)
+selectCodeEditor("reg_24bit.vhd", 358, 365); // ch (w, cr)

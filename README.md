@@ -16,3 +16,24 @@
 - Hardware test procedure and results used to verify
 - Simulation results from test bench
 - Schematic and UCF file for CISC24 machine
+
+## Instruction Set
+- **HALT**
+- **CLR** SrcA
+- **INC** SrcA
+- **DEC** SrcA
+- **NEG** SrcA
+- **SLL** SrcA, IMMED
+- **SRL** SrcA, IMMED
+- **MVS** SrcA, SrcB
+- **MVMI** MemA, SrcB
+- **MSM** SrcA, MemB
+- **ADD** SrcA, SrcB
+- **SUB** SrcA, SrcB
+- **MUL** SrcA, SrcB
+- **DIV** SrcA, SrcB
+- **AND** SrcA, SrcB
+- **OR** SrcA, SrcB
+- **XOR** SrcA, SrcB
+- **ADDI** SrcA, IMMED
+- **SUBI** SrcA, IMMED
