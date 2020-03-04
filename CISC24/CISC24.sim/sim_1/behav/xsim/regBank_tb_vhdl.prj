@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../CISC24.srcs/sources_1/new/regBank.vhd" \
+"../../../../CISC24.srcs/sources_1/new/reg_24bit.vhd" \
+"../../../../CISC24.srcs/sim_1/new/regBank_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -131,6 +131,8 @@ begin
                 RB_out<=regOutput6;
             when "111" =>
                 RB_out<=regOutput7;
+            when others =>
+                RB_OUT <="000000000000000000000000";
         end case;
     
     
@@ -153,6 +155,8 @@ begin
                 RA_out<=regOutput6;
             when "111" =>
                 RA_out<=regOutput7;
+            when others =>
+                RA_OUT <="000000000000000000000000";
         end case;
      else 
      regEnable<='1';
@@ -173,6 +177,8 @@ begin
                 RA_out<="000000000000000000000000";
             when "111" =>
                 RA_out<="000000000000000000000000";
+            when others =>
+                RA_OUT <="000000000000000000000000";
         end case;
     end if;
     end if;

@@ -1,0 +1,536 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 6796
+License: Customer
+
+Current time: 	Wed Mar 04 14:20:44 EST 2020
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 232 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	dylma
+User home directory: C:/Users/dylma
+User working directory: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/dylma/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/dylma/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/dylma/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/vivado.log
+Vivado journal file location: 	C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/vivado.jou
+Engine tmp dir: 	C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/.Xil/Vivado-6796-DESKTOP-PSOESGB
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 667 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 115 MB (+117880kb) [00:00:12]
+// [Engine Memory]: 603 MB (+480553kb) [00:00:12]
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\dylma\OneDrive\Documents\UMD 2019-2020 Spring\ECE 368\CISC24\CISC24\CISC24.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 729 MB. GUI used memory: 49 MB. Current time: 3/4/20, 2:20:46 PM EST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/julia/Documents/Julia Docs/CISC24/CISC24' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 818 MB (+194250kb) [00:00:19]
+// [Engine Memory]: 859 MB (+217kb) [00:00:21]
+// WARNING: HEventQueue.dispatchEvent() is taking  4710 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:09 . Memory (MB): peak = 909.953 ; gain = 269.523 
+// Project name: CISC24; location: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bB (cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // B (F, cr)
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (TopLevel.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel(Behavioral) (TopLevel.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 13 seconds
+selectCodeEditor("regBank.vhd", 200, 442); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "regBank_tb"); // ac (Q, F)
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "VHDL", 3); // cm (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// [Engine Memory]: 905 MB (+3004kb) [00:01:15]
+// Tcl Command: 'file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new 
+// Tcl Message: can't create directory "C:/Users/dylma/OneDrive/Documents/UMD": file already exists 
+// Tcl Command: 'file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new'
+// Tcl Message: file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new 
+// Tcl Message: can't create directory "C:/Users/dylma/OneDrive/Documents/UMD": file already exists 
+// Tcl Command: 'file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new'
+// Tcl Command: 'file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new'
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 14 seconds
+// Tcl Command: 'file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new'
+// Tcl Message: file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new 
+// Tcl Message: can't create directory "C:/Users/dylma/OneDrive/Documents/UMD": file already exists 
+// Tcl Message: file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new 
+// Tcl Message: can't create directory "C:/Users/dylma/OneDrive/Documents/UMD": file already exists 
+dismissDialog("Add Sources"); // c (cr)
+// Tcl Message: file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new 
+// Tcl Message: can't create directory "C:/Users/dylma/OneDrive/Documents/UMD": file already exists 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Command: 'file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new'
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// bB (cr):  Add Simulation Sources  : addNotify
+// Tcl Message: file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new 
+// Tcl Message: can't create directory "C:/Users/dylma/OneDrive/Documents/UMD": file already exists 
+// Tcl Message: file mkdir {C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new} 
+// Tcl Message: close [ open {C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 {{C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd}} 
+// I (cr): Define Module: addNotify
+dismissDialog("Add Simulation Sources"); // bB (cr)
+// Elapsed time: 21 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 1); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd)]", 10, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd)]", 10, false, false, false, false, false, true); // B (F, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 910 MB. GUI used memory: 64 MB. Current time: 3/4/20, 2:22:26 PM EST
+selectCodeEditor("regBank_tb.vhd", 431, 410); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 29, 389); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 112, 393); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 119, 431); // ch (w, cr)
+// Elapsed time: 86 seconds
+selectCodeEditor("regBank_tb.vhd", 162, 390); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 189, 438); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 134, 442); // ch (w, cr)
+typeControlKey((HResource) null, "regBank_tb.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 16 seconds
+typeControlKey((HResource) null, "regBank_tb.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 59 seconds
+selectCodeEditor("regBank_tb.vhd", 379, 544); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 294, 498); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("regBank_tb.vhd", 550, 491); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 550, 515); // ch (w, cr)
+// Elapsed time: 98 seconds
+typeControlKey((HResource) null, "regBank_tb.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 53, 488); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 361, 491); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 358, 446); // ch (w, cr)
+// Elapsed time: 69 seconds
+selectCodeEditor("regBank_tb.vhd", 385, 214); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 365, 239); // ch (w, cr)
+// Elapsed time: 10 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+selectCodeEditor("regBank.vhd", 462, 235); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 165, 200); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank_tb.vhd", 2); // i (h, cr)
+typeControlKey((HResource) null, "regBank_tb.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("regBank_tb.vhd", 711, 229); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 641, 208); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("regBank_tb.vhd", 403, 260); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 386, 211); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 396, 242); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 386, 270); // ch (w, cr)
+// Elapsed time: 145 seconds
+typeControlKey((HResource) null, "regBank_tb.vhd", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "regBank_tb.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 27 seconds
+selectCodeEditor("regBank_tb.vhd", 312, 207); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// [GUI Memory]: 121 MB (+974kb) [00:12:05]
+selectCodeEditor("regBank.vhd", 189, 442); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 123, 414); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 182, 428); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank_tb.vhd", 2); // i (h, cr)
+typeControlKey((HResource) null, "regBank_tb.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 85, 137); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("regBank_tb.vhd", 112, 365); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 112, 365); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 109, 470); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 109, 460); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 641, 333); // ch (w, cr)
+// Elapsed time: 44 seconds
+selectCodeEditor("regBank_tb.vhd", 585, 379); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 319, 383); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("regBank_tb.vhd", 707, 232); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 571, 494); // ch (w, cr)
+// Elapsed time: 88 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+selectCodeEditor("regBank.vhd", 172, 501); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 134, 456); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 95, 463); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 940 MB. GUI used memory: 60 MB. Current time: 3/4/20, 2:35:52 PM EST
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank_tb.vhd", 2); // i (h, cr)
+selectCodeEditor("regBank_tb.vhd", 197, 298); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 141, 148); // ch (w, cr)
+typeControlKey((HResource) null, "regBank_tb.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("regBank_tb.vhd", 99, 169); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("regBank_tb.vhd", 280, 246); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 18 seconds
+selectCodeEditor("regBank_tb.vhd", 134, 296); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 134, 296, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("regBank_tb.vhd", 134, 296); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 134, 296); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 134, 296); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("regBank_tb.vhd", 134, 296); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 134, 283); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 123, 310); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 235, 447); // ch (w, cr)
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+selectCodeEditor("regBank.vhd", 294, 237); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank_tb.vhd", 2); // i (h, cr)
+// Elapsed time: 61 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 15 seconds
+selectCodeEditor("regBank_tb.vhd", 666, 426); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 519, 527); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 92, 500); // ch (w, cr)
+selectCodeEditor("regBank_tb.vhd", 126, 430); // ch (w, cr)
+// Elapsed time: 54 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 108 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd)]", 8, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'regBank_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj regBank_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'regBank' INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'reg_24bit' INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'regBank_tb' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto ebc5f25f3b114c8a903ca0b7ed9e7c12 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot regBank_tb_behav xil_defaultlib.regBank_tb -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2019.2 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ebc5f25f3b114c8a903ca0b7ed9e7c12 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot regBank_tb_behav xil_defaultlib.regBank_tb -log elaborate.log  Using 2 slave threads. Starting static elaboration ERROR: [VRFC 10-2335] case statement does not cover all choices. 'others' clause is needed [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:117] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit regbank_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 964.102 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 8 seconds
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// a (cr): Critical Messages: addNotify
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.", 1); // b (F, a)
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information.", 0); // b (F, a)
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information.", 0, false, false, false, false, true); // b (F, a) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 2, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 3, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 3, false, false, false, false, false, true); // ah (O, cr) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 3, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 3, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 3, false, false, false, false, false, true); // ah (O, cr) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages]", 1, true); // ah (O, cr) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 2, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 2, false, false, false, false, false, true); // ah (O, cr) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 2, false); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 2, false, false, false, false, false, true); // ah (O, cr) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 2, false); // ah (O, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("regBank_tb.vhd", 336, 20); // ch (w, cr)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank.vhd", 1); // i (h, cr)
+selectCodeEditor("regBank.vhd", 414, 534); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 250, 55); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("regBank.vhd", 292, 419); // ch (w, cr)
+// Elapsed time: 14 seconds
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("regBank.vhd", 309, 660); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 309, 660, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("regBank.vhd", 247, 202); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 247, 174); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 351, 601); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 351, 545); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 187, 157); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 222, 272); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 387, 657); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 310, 178); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("regBank.vhd", 313, 541); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 22 seconds
+selectCodeEditor("regBank.vhd", 226, 162); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 418, 183); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 264, 557); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 131, 333); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 386, 651); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 386, 672); // ch (w, cr)
+typeControlKey((HResource) null, "regBank.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("regBank.vhd", 110, 707); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regBank_tb.vhd", 2); // i (h, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'regBank_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj regBank_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'regBank' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto ebc5f25f3b114c8a903ca0b7ed9e7c12 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot regBank_tb_behav xil_defaultlib.regBank_tb -log elaborate.log" 
+// Tcl Message: Built simulation snapshot regBank_tb_behav 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message:  ****** Webtalk v2019.2 (64-bit)   **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.  source C:/Users/dylma/OneDrive/Documents/UMD -notrace invalid command name "%"     while executing "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"     (file "C:/Users/dylma/OneDrive/Documents/UMD" line 1) INFO: [Common 17-206] Exiting Webtalk at Wed Mar  4 14:45:33 2020... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 964.102 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "regBank_tb_behav -key {Behavioral:sim_1:Functional:regBank_tb} -tclbatch {regBank_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// WARNING: HEventQueue.dispatchEvent() is taking  1101 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 10 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source regBank_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// HMemoryUtils.trashcanNow. Engine heap size: 948 MB. GUI used memory: 68 MB. Current time: 3/4/20, 2:45:37 PM EST
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// [Engine Memory]: 952 MB (+1251kb) [00:25:06]
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'regBank_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 977.164 ; gain = 13.063 
+// 'd' command handler elapsed time: 12 seconds
+dismissDialog("Run Simulation"); // e (cr)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, A_OUT_TEST[23:0]]", 5); // a (r, cr)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, A_OUT_TEST[23:0]]", 5); // a (r, cr)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 952 MB. GUI used memory: 67 MB. Current time: 3/4/20, 2:45:46 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, B_OUT_TEST[23:0]]", 6); // a (r, cr)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, B_OUT_TEST[23:0]]", 6); // a (r, cr)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E (f, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 952 MB. GUI used memory: 67 MB. Current time: 3/4/20, 2:45:49 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, A_OUT_TEST[23:0]]", 5, true); // a (r, cr) - Node
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 215, -28); // n (o, cr)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// HMemoryUtils.trashcanNow. Engine heap size: 952 MB. GUI used memory: 67 MB. Current time: 3/4/20, 2:46:04 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 952 MB. GUI used memory: 69 MB. Current time: 3/4/20, 2:46:05 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 952 MB. GUI used memory: 73 MB. Current time: 3/4/20, 2:46:05 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 952 MB. GUI used memory: 67 MB. Current time: 3/4/20, 2:46:06 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 952 MB. GUI used memory: 67 MB. Current time: 3/4/20, 2:46:06 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
