@@ -44,7 +44,8 @@ component regBank is
     RA_out, RB_out : out std_logic_vector(23 downto 0);
     CLK : in std_logic;
     RW : in std_logic;
-    CLR: in std_logic
+    CLR: in std_logic;
+    toggle : in std_logic
   );
 end component;
 
@@ -56,6 +57,7 @@ signal data_TEST : std_logic_vector(23 downto 0) := "000000000000000000000000"; 
 signal A_OUT_TEST : std_logic_vector(23 downto 0);
 signal B_OUT_TEST : std_logic_vector(23 downto 0);
 signal clear_TEST, RW_TEST : std_logic := '0';
+signal toggle_test : std_logic := '0';
 
 begin
     UUT: regBank port map (
@@ -66,7 +68,8 @@ begin
     RB_out => B_OUT_TEST,
     CLK => CLK_TEST,
     RW => RW_TEST,
-    CLR => CLEAR_TEST
+    CLR => CLEAR_TEST,
+    toggle => toggle_test
     );
     CLK_process : process
     begin
@@ -79,24 +82,45 @@ begin
     
     wait for 100ns;
     
-    -- write 0x01 to two different locations
-    data_TEST(7 downto 0) <= x"01";
-    --write to location 001 and 010
-    rw_test <= '1';
-    addrA_TEST <= "001";
-    addrB_TEST <= "010";
+--    -- write 0x01 to two different locations
+--    data_TEST(7 downto 0) <= x"01";
+--    --write to location 001 and 010
+--    rw_test <= '1';
+--    addrA_TEST <= "001";
+--    addrB_TEST <= "010";
     
+--    wait for 100 ns;
+--    Clear_test <= '1';
+--    wait for 10ns;
+--    clear_test <= '0';
+--    rw_test <= '0';
+--    data_test(7 downto 0) <= x"02";
+--    addrA_Test <= "001";
+--    addrB_Test <= "111";
+--    wait for 100 ns;
+--    clear_test <= '1';
+--    wait for 100 ns;
+    data_TEST <= "000000000000000000000001";
+    addrA_TEST <= "001"; -- SHOULD OUTPUT 0X00
+    addrB_TEST <= "010"; -- SHOULD OUTPUT 0X00
+    rw_test<='1';
+    toggle_test <= not toggle_test; -- trigger regBank
     wait for 100 ns;
-    Clear_test <= '1';
-    wait for 10ns;
-    clear_test <= '0';
-    rw_test <= '0';
-    data_test(7 downto 0) <= x"02";
-    addrA_Test <= "001";
-    addrB_Test <= "111";
+    addrA_TEST <= "001"; -- SHOULD OUTPUT 0X01
+    addrB_TEST <= "001"; -- SHOULD OUTPUT 0X01
+    rw_test<='0';
+    toggle_test <= not toggle_test; -- trigger regBank
     wait for 100 ns;
-    clear_test <= '1';
+    data_Test <= "000000000000000000000011";
+    addrA_TEST <= "001"; -- SHOULD OUTPUT 0X00
+    addrB_TEST <= "001"; -- SHOULD OUTPUT 0X01  ??
+    rw_test<='1';
+    toggle_test <= not toggle_test; -- trigger regBank
     wait for 100 ns;
+    addrA_TEST <= "001"; -- SHOULD OUTPUT 0X04
+    addrB_TEST <= "001"; -- SHOULD OUTPUT 0X04
+    rw_test<='0';
+    toggle_test <= not toggle_test; -- trigger regBank
     
     end process;
 end Behavioral;

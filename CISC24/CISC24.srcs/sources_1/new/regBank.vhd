@@ -38,7 +38,8 @@ entity regBank is
     RA_out, RB_out : out std_logic_vector(23 downto 0);
     CLK : in std_logic;
     RW : in std_logic;
-    CLR: in std_logic
+    CLR: in std_logic;
+    toggle : in std_logic
   );
 end regBank;
 architecture Behavioral of regBank is
@@ -110,10 +111,11 @@ reg7 : reg_24bit port map(
     enable => regEnable,
     Q_OUT => regOutput7
 );
-process(clk)
+
+process(toggle, CLR)
 begin
-    if(CLK'Event and CLk='1') then
-    regEnable<='0';
+    if CLR = '0' then
+    regEnable<='0'; 
         case RB_ADDR is
             when "000" =>
                 RB_out<=regOutput0;
@@ -134,7 +136,7 @@ begin
             when others =>
                 RB_OUT <="000000000000000000000000";
         end case;
-    
+    regEnable<='0';
     
     if(rw='0') then -- READ from regBank
     regEnable<='0';
@@ -159,7 +161,7 @@ begin
                 RA_OUT <="000000000000000000000000";
         end case;
      else 
-     regEnable<='1';
+     regEnable<='1'; -- write to register
          case RA_ADDR is
             when "000" =>
                 RA_out<="000000000000000000000000";
@@ -180,7 +182,7 @@ begin
             when others =>
                 RA_OUT <="000000000000000000000000";
         end case;
-    end if;
+        end if;
     end if;
 end process;
 end Behavioral;

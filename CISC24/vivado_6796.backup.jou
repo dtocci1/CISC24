@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Mar  4 14:20:26 2020
+# Process ID: 6796
+# Current directory: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5740 C:\Users\dylma\OneDrive\Documents\UMD 2019-2020 Spring\ECE 368\CISC24\CISC24\CISC24.xpr
+# Log file: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/vivado.log
+# Journal file: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.xpr}
+uupdate_compile_order -fileset sources_1file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new
+file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new
+file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new
+file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new
+file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new
+file mkdir {C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new}
+close [ open {C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd} w ]
+add_files -fileset sim_1 {{C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+source regBank_tb.tcl
+close_sim

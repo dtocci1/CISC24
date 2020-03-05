@@ -36,18 +36,18 @@ entity reg_24bit is
     CLK : in std_logic;
     CLR : in std_logic;
     D_IN : in std_logic_vector(23 downto 0);
-    Q_OUT : out std_logic_vector(23 downto 0);
+    Q_OUT : out std_logic_vector(23 downto 0) := "000000000000000000000000";
     enable : in std_logic
   );
 end reg_24bit;
 
 architecture Behavioral of reg_24bit is
 begin
-    process(clk,clr)
+    process(enable, clr) -- update when ENABLE or CLR
     begin
         if clr = '1' then
             Q_OUT <= "000000000000000000000000";
-        elsif (rising_edge(CLK) and enable = '1') then
+        elsif (enable = '1') then
             Q_OUT <= D_IN;
         end if;
     end process;
