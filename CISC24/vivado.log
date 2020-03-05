@@ -140,3 +140,8 @@ source regBank_tb.tcl
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'regBank_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 977.164 ; gain = 13.063
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 981.465 ; gain = 4.301
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  4 14:48:57 2020...

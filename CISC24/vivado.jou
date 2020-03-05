@@ -29,3 +29,4 @@ update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 launch_simulation
 source regBank_tb.tcl
+close_sim
