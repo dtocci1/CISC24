@@ -32,3 +32,4 @@ source regBank_tb.tcl
 close_sim
 launch_simulation
 source regBank_tb.tcl
+close_sim
