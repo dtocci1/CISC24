@@ -38,7 +38,7 @@ entity regBank is
     RA_out, RB_out : out std_logic_vector(23 downto 0);
     CLK : in std_logic;
     RW : in std_logic;
-    CLR: in std_logic;
+    Clear: in std_logic;
     toggle : in std_logic
   );
 end regBank;
@@ -57,64 +57,63 @@ signal regEnable : std_logic := '0';
 begin
 reg0 : reg_24bit port map(
     CLK => CLK,
-    CLR => CLR,
+    CLR => Clear,
     D_IN => RA_DATA_IN,
     enable => regEnable,
     Q_OUT => regOutput0
 );
 reg1 : reg_24bit port map(
     CLK => CLK,
-    CLR => CLR,
+    CLR => Clear,
     D_IN => RA_DATA_IN,
     enable => regEnable,
     Q_OUT => regOutput1
 );
 reg2 : reg_24bit port map(
     CLK => CLK,
-    CLR => CLR,
+    CLR => Clear,
     D_IN => RA_DATA_IN,
     enable => regEnable,
     Q_OUT => regOutput2
 );
 reg3 : reg_24bit port map(
     CLK => CLK,
-    CLR => CLR,
+    CLR => Clear,
     D_IN => RA_DATA_IN,
     enable => regEnable,
     Q_OUT => regOutput3
 );
 reg4 : reg_24bit port map(
     CLK => CLK,
-    CLR => CLR,
+    CLR => Clear,
     D_IN => RA_DATA_IN,
     enable => regEnable,
     Q_OUT => regOutput4
 );
 reg5 : reg_24bit port map(
     CLK => CLK,
-    CLR => CLR,
+    CLR => Clear,
     D_IN => RA_DATA_IN,
     enable => regEnable,
     Q_OUT => regOutput5
 );
 reg6 : reg_24bit port map(
     CLK => CLK,
-    CLR => CLR,
+    CLR => Clear,
     D_IN => RA_DATA_IN,
     enable => regEnable,
     Q_OUT => regOutput6
 );
 reg7 : reg_24bit port map(
     CLK => CLK,
-    CLR => CLR,
+    CLR => Clear,
     D_IN => RA_DATA_IN,
     enable => regEnable,
     Q_OUT => regOutput7
 );
 
-process(toggle, CLR)
+process(toggle, Clear)
 begin
-    if CLR = '0' then
     regEnable<='0'; 
         case RB_ADDR is
             when "000" =>
@@ -183,6 +182,5 @@ begin
                 RA_OUT <="000000000000000000000000";
         end case;
         end if;
-    end if;
 end process;
 end Behavioral;

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/julia/Documents/Julia Docs/CISC24/CISC24/CISC24.runs/synth_1'
+HD_PWD='C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

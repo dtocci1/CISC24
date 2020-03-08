@@ -44,7 +44,7 @@ component regBank is
     RA_out, RB_out : out std_logic_vector(23 downto 0);
     CLK : in std_logic;
     RW : in std_logic;
-    CLR: in std_logic;
+    Clear: in std_logic;
     toggle : in std_logic
   );
 end component;
@@ -68,7 +68,7 @@ begin
     RB_out => B_OUT_TEST,
     CLK => CLK_TEST,
     RW => RW_TEST,
-    CLR => CLEAR_TEST,
+    Clear => CLEAR_TEST,
     toggle => toggle_test
     );
     CLK_process : process
@@ -121,6 +121,10 @@ begin
     addrB_TEST <= "001"; -- SHOULD OUTPUT 0X04
     rw_test<='0';
     toggle_test <= not toggle_test; -- trigger regBank
-    
+    wait for 200ns;
+    clear_test<='1';
+    wait for 50 ns;
+    clear_test<='0';
+    wait for 100ns;
     end process;
 end Behavioral;
