@@ -1,2 +1,5 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ALU_tb_vhd'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/new/ALU_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_tb'
+ERROR: [VRFC 10-4982] syntax error near '"' [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/new/ALU_tb.vhd:81]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/new/ALU_tb.vhd:38]
+INFO: [VRFC 10-3070] VHDL file 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/new/ALU_tb.vhd' ignored due to errors

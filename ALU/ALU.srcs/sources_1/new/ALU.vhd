@@ -34,12 +34,10 @@ use ieee.NUMERIC_STD.all;
 
 entity ALU is
   Port ( 
-    CLK : in std_logic;
     RA, RB : in std_logic_vector(23 downto 0);
     OP : in std_logic_vector(4 downto 0);
     CFLAG : out std_logic;
-    ALU_OUT : out std_logic_vector(23 downto 0);
-    LDST_OUT : out std_logic_vector(7 downto 0)
+    ALU_OUT : out std_logic_vector(23 downto 0)
   );
 end ALU;
 
@@ -55,7 +53,11 @@ case OP is
 when "10000" => -- add
     ALU_OUT <= RA + RB;
 when "10001" => -- subract
+    if (RB > RA) then
+    ALU_OUT <= "000000000000000000000000";
+    else
     ALU_OUT <= RA - RB;
+    end if;
 when "10010" => -- multiply
     ALU_OUT <= std_logic_vector(to_unsigned((to_integer(unsigned(RA)) * to_integer(unsigned(RB))),24)) ;
 when "10011" => -- divide
@@ -81,7 +83,7 @@ when "00101" => -- INC
 when "00110" => -- DEC
     ALU_OUT <= RA - "000000000000000000000001";
 when others => -- invalid op code
-    ALU_OUT <= "ZZ"; -- undefined
+    ALU_OUT <= "000000000000000000000000"; -- undefined
 end case;
 end process;
  carryTemp <= ('0' & RA) + ('0' & RB); -- take into account carry
