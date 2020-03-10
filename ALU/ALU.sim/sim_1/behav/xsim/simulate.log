@@ -1,0 +1,28 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Note: Start ALU Test Bench
+Time: 100 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed ADD 1. ALU_OUT=0
+Time: 110 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed SUB 1. ALU_OUT=0
+Time: 120 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed AND 1. ALU_OUT=0
+Time: 130 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed OR 1. ALU_OUT=0
+Time: 140 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed ADD 2. ALU_OUT=0
+Time: 150 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed SUB 2. ALU_OUT=0
+Time: 160 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed AND 2. ALU_OUT=0
+Time: 170 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed OR 2. ALU_OUT=0
+Time: 180 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed MEMORY READ(1) ALU_OUT=0
+Time: 240 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed MEMORY WRITE ALU_OUT=0
+Time: 250 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Error: Failed MEMORY READ(2) ALU_OUT=0
+Time: 260 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd
+Note: Finish ALU Test Bench
+Time: 260 ns  Iteration: 0  Process: /ALU_tb_vhd/tb  File: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/ALU/ALU.srcs/sim_1/imports/sources/alu_tb.vhd

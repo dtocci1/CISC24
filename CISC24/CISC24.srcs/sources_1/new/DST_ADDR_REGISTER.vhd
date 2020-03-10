@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03/04/2020 09:33:22 AM
+-- Create Date: 03/10/2020 02:22:37 PM
 -- Design Name: 
--- Module Name: reg_24bit - Behavioral
+-- Module Name: DST_ADDR_REGISTER - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,7 +31,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity reg_24bit is
+entity DST_ADDR_REGISTER is
+ Port ( 
+    CLK : in std_logic;
+    Clear : in std_logic;
+    Data_in : in std_logic_vector(23 downto 0);
+    enable : in std_logic;
+    Data_out : out std_Logic_vector(23 downto 0)
+ );
+end DST_ADDR_REGISTER;
+
+architecture Behavioral of DST_ADDR_REGISTER is
+
+component reg_24bit is
   Port ( 
     CLK : in std_logic;
     CLR : in std_logic;
@@ -39,16 +51,16 @@ entity reg_24bit is
     Q_OUT : out std_logic_vector(23 downto 0) := "000000000000000000000000";
     enable : in std_logic
   );
-end reg_24bit;
+end component;
 
-architecture Behavioral of reg_24bit is
 begin
-    process(clk) -- update when ENABLE or CLR
-    begin
-        if (clr = '1' and clk ='1' and clk'event) then
-            Q_OUT <= "000000000000000000000000";
-        elsif (enable = '1' and clk='1' and clk'event) then
-            Q_OUT <= D_IN;
-        end if;
-    end process;
+ALU_Data_Reg : reg_24bit port map (
+    CLK => CLK,
+    CLR => clear,
+    D_IN => Data_in,
+    enable => enable,
+    Q_OUT => Data_out
+);
+
 end Behavioral;
+

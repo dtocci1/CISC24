@@ -2,3 +2,6 @@ Running: xsim.dir/ALU_tb_vhd_behav/xsimk.exe -simmode gui -wdb ALU_tb_vhd_behav.
 Design successfully loaded
 Design Loading Memory Usage: 5796 KB (Peak: 5796 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 6524 KB (Peak: 6524 KB)
+Simulation CPU Usage: 61 ms

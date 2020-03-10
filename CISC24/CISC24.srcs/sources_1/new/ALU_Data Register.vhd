@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03/04/2020 09:33:22 AM
+-- Create Date: 03/10/2020 02:11:36 PM
 -- Design Name: 
--- Module Name: reg_24bit - Behavioral
+-- Module Name: ALU_Data Register - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,24 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity reg_24bit is
-  Port ( 
-    CLK : in std_logic;
-    CLR : in std_logic;
-    D_IN : in std_logic_vector(23 downto 0);
-    Q_OUT : out std_logic_vector(23 downto 0) := "000000000000000000000000";
-    enable : in std_logic
-  );
-end reg_24bit;
+entity ALU_Data Register is
+--  Port ( );
+end ALU_Data Register;
 
-architecture Behavioral of reg_24bit is
+architecture Behavioral of ALU_Data Register is
+
 begin
-    process(clk) -- update when ENABLE or CLR
-    begin
-        if (clr = '1' and clk ='1' and clk'event) then
-            Q_OUT <= "000000000000000000000000";
-        elsif (enable = '1' and clk='1' and clk'event) then
-            Q_OUT <= D_IN;
-        end if;
-    end process;
+
+
 end Behavioral;
