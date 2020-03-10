@@ -30,10 +30,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity VGA_RGB_Top is
-  Port (clk     : in std_logic;
+  Port (CLK     : in std_logic;
         sw      : in std_logic_vector(7 downto 0);
-        PS2_CLOCK : in std_logic;
-        PS2_DATA : in std_logic;
+        PS2_C : in std_logic;
+        PS2_D : in std_logic;
         vgaRed   : out std_logic_vector(3 downto 0);
         vgaGreen : out std_logic_vector(3 downto 0);
         vgaBlue  : out std_logic_vector(3 downto 0);
@@ -41,7 +41,7 @@ entity VGA_RGB_Top is
         Vsync    : out std_logic;
         copy_Hsync    : out std_logic;
         copy_Vsync    : out std_logic;
-        LED_OUTPUT : out std_logic_vector(7 downto 0));
+        LED_OUT : out std_logic_vector(7 downto 0));
 end VGA_RGB_Top;
 
 architecture Behavioral of VGA_RGB_Top is
@@ -127,8 +127,8 @@ begin
 	);
 u1 : ps2Controller port map(
     reset=>'0',
-    ps2_clk=>PS2_Clock,
-    ps2_data=>ps2_data,
+    ps2_clk=>PS2_C,
+    ps2_data=>ps2_d,
     keycode=>codekey,
     valid=>validOut
 );
@@ -155,11 +155,11 @@ with HC(2 downto 0) select pxbit<=
           letterByte(1) when "110",
            letterByte(0) when "111";
            
-           LED_OUTPUT<=ascii_out;
+           LED_OUT<=codekey;
            
            
   vgaRed(3 downto 0)   <="0000";-- HC(8 downto 5) when (Blank='0' and sw(0)='1') else (others=>'0');
-  vgaGreen(3 downto 0) <="1111" when(blank='0' and pxbit='1'); --VC(7 downto 4) when (Blank='0' and sw(1)='1') else (others=>'0');
+  vgaGreen(3 downto 0) <="1111" when(blank='0');-- and pxbit='1'); --VC(7 downto 4) when (Blank='0' and sw(1)='1') else (others=>'0');
   vgaBlue(3 downto 0)  <="0000";-- HC(5 downto 2) when (Blank='0' and sw(2)='1') else (others=>'0');
    
   copy_HSYNC <= HSTemp;

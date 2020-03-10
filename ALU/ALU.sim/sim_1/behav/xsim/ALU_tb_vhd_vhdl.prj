@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ALU.srcs/sources_1/new/ALU.vhd" \
+"../../../../ALU.srcs/sources_1/imports/sources/alu_arithmetic_unit.vhd" \
+"../../../../ALU.srcs/sources_1/imports/sources/alu_load_store_unit.vhd" \
+"../../../../ALU.srcs/sources_1/imports/sources/alu_logic_unit.vhd" \
+"../../../../ALU.srcs/sources_1/imports/sources/alu_mux.vhd" \
+"../../../../ALU.srcs/sources_1/imports/sources/alu_shift_unit.vhd" \
+"../../../../ALU.srcs/sim_1/imports/sources/alu_tb.vhd" \
+
+# Do not sort compile order
+nosort

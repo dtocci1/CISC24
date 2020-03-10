@@ -36,6 +36,7 @@ ARCHITECTURE rtl OF blockRAM IS
    TYPE mem IS ARRAY(0 TO 511) OF std_logic_vector(23 DOWNTO 0); -- 512x24bit array
    SIGNAL ram_block : mem;
 BEGIN
+
    PROCESS (clock)
    BEGIN
       IF (clock'event AND clock = '1') THEN

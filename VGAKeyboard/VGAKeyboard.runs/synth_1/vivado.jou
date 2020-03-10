@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Feb 28 13:48:12 2020
-# Process ID: 17056
+# Start of session at: Sun Mar  8 14:11:33 2020
+# Process ID: 19136
 # Current directory: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/VGAKeyboard/VGAKeyboard.runs/synth_1
 # Command line: vivado.exe -log VGA_RGB_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA_RGB_Top.tcl
 # Log file: C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/VGAKeyboard/VGAKeyboard.runs/synth_1/VGA_RGB_Top.vds
