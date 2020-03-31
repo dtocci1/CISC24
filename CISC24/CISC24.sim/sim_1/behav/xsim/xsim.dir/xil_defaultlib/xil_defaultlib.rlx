@@ -2,8 +2,9 @@
 2019.2
 Nov  6 2019
 21:57:16
-C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new/ProgramCounter_tb.vhd,1583945650,vhdl,,,,programcounter_tb,,,,,,,,
-C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd,1583681961,vhdl,,,,regbank_tb,,,,,,,,
-C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/ProgramCounter.vhd,1583944223,vhdl,,,,programcounter,,,,,,,,
-C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd,1583681539,vhdl,,,,regbank,,,,,,,,
-C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd,1583864395,vhdl,,,,reg_24bit,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.ip_user_files/bd/BlockRAM/ip/BlockRAM_blk_mem_gen_0_0/sim/BlockRAM_blk_mem_gen_0_0.v,1585688823,verilog,,,,BlockRAM_blk_mem_gen_0_0,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.ip_user_files/bd/BlockRAM/sim/BlockRAM.vhd,1585688823,vhdl,,,,blockram,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sim_1/new/BRAM_TB.vhd,1585689739,vhdl,,,,bram_tb,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sim_1/new/ProgramCounter_tb.vhd,1584384108,vhdl,,,,programcounter_tb,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/ProgramCounter.vhd,1584384108,vhdl,,,,programcounter,,,,,,,,

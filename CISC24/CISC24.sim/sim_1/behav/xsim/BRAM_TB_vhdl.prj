@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../CISC24.ip_user_files/bd/BlockRAM/sim/BlockRAM.vhd" \
+"../../../../CISC24.srcs/sim_1/new/BRAM_TB.vhd" \
+
+# Do not sort compile order
+nosort

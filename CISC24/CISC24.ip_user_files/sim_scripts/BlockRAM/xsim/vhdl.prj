@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/BlockRAM/sim/BlockRAM.vhd" \
+
+nosort
