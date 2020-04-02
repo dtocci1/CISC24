@@ -44,6 +44,7 @@ Port (
     ALU_OUT : out std_logic_vector(23 downto 0)
   );
   end component;
+  
   component BRAM_wrapper is
    port (
     BRAM_PORTA_0_addr : in STD_LOGIC_VECTOR ( 8 downto 0 );

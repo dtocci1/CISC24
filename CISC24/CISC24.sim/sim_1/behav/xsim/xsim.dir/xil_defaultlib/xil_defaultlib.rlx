@@ -7,4 +7,7 @@ C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.ip_user_files/bd/BlockRAM/s
 C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
 C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sim_1/new/BRAM_TB.vhd,1585689739,vhdl,,,,bram_tb,,,,,,,,
 C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sim_1/new/ProgramCounter_tb.vhd,1584384108,vhdl,,,,programcounter_tb,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd,1584384108,vhdl,,,,regbank_tb,,,,,,,,
 C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/ProgramCounter.vhd,1584384108,vhdl,,,,programcounter,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd,1584384108,vhdl,,,,regbank,,,,,,,,
+C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd,1584384108,vhdl,,,,reg_24bit,,,,,,,,

@@ -1,2 +1,6 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sim_1/new/BRAM_TB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'BRAM_TB'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'regBank'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'reg_24bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'regBank_tb'

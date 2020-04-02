@@ -45,6 +45,21 @@ architecture Behavioral of ALU is
 
 signal carryTemp : std_logic_vector(24 downto 0);
 
+  component BRAM_wrapper is
+   port (
+    BRAM_PORTA_0_addr : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    BRAM_PORTA_0_clk : in STD_LOGIC;
+    BRAM_PORTA_0_din : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    BRAM_PORTA_0_dout : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    BRAM_PORTA_0_en : in STD_LOGIC;
+    BRAM_PORTA_0_we : in STD_LOGIC_VECTOR ( 0 to 0 );
+    BRAM_PORTB_0_addr : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    BRAM_PORTB_0_clk : in STD_LOGIC;
+    BRAM_PORTB_0_din : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    BRAM_PORTB_0_dout : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    BRAM_PORTB_0_we : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component;
 begin
 process(OP) -- run when OP code is input
 begin
@@ -83,6 +98,7 @@ when "00101" => -- INC
 when "00110" => -- DEC
     ALU_OUT <= RA - "000000000000000000000001";
 when "01010" => --MVS
+    
     --ALU_OUT <= ;
 when "01011" => --MVMI
 
