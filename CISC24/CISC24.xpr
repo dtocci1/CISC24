@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.xpr">
+<Project Version="7" Minor="44" Path="C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ebc5f25f3b114c8a903ca0b7ed9e7c12"/>
@@ -150,6 +150,13 @@
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../ALU/ALU.srcs/sources_1/new/ALU.vhd"/>
           <Attr Name="ImportTime" Val="1584384710"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/InputReader.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
