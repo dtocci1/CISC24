@@ -52,7 +52,7 @@ begin
 case OP is 
 when "10000" => -- add
     ALU_OUT <= RA + RB;
-when "10001" => -- subract
+when "10001" => -- subtract
     if (RB > RA) then
     ALU_OUT <= "000000000000000000000000";
     else

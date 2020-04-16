@@ -40,6 +40,7 @@ component ALU is
 Port ( 
     RA, RB : in std_logic_vector(23 downto 0);
     OP : in std_logic_vector(4 downto 0);
+    addr_mode : in std_logic_vector(1 downto 0);
     CFLAG : out std_logic;
     ALU_OUT : out std_logic_vector(23 downto 0)
   );
@@ -61,6 +62,10 @@ Port (
   );
   end component;
 begin
+
+--if(addr_mode='00')then
+
+--end if;
 
 
 end Behavioral;
