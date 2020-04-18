@@ -161,5 +161,15 @@ signal ALU_Reg_enable, ASRC_Reg_Enable, BSRC_Reg_Enable, DST_Reg_Enable, Instruc
 
 begin
 
+decoder : Instruct_decoder port map  (
+    instruct => instruction,
+    clk => clk,
+    Addr_modeA => AddressModeA, 
+    addr_modeB => AddressModeB,
+    OP_code => OP,
+    srcA => sourceA,
+    srcB => sourceB,
+    imm => immediate
+);
 
 end Behavioral;

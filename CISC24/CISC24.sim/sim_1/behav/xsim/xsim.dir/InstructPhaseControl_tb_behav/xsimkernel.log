@@ -2,3 +2,6 @@ Running: xsim.dir/InstructPhaseControl_tb_behav/xsimk.exe -simmode gui -wdb Inst
 Design successfully loaded
 Design Loading Memory Usage: 5220 KB (Peak: 5220 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 5792 KB (Peak: 5792 KB)
+Simulation CPU Usage: 30 ms
