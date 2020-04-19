@@ -16,6 +16,8 @@
 -- Revision 0.01 - File Created
 -- Additional Comments:
 -- 
+ -- aBRAM_DOUT <= std_logic_vector(to_unsigned(to_integer(unsigned(aBRAM_DOUT )) + 1, 24)); 
+
 ----------------------------------------------------------------------------------
 
 
@@ -74,6 +76,7 @@ signal rw_signal, clr, tog, BRAM_aEN: std_logic;
 signal A_addr, B_addr:std_logic_vector(2 downto 0);
 SIGNAL BRAM_aADDR, BRAM_bADDR:STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL BRAM_aWE, BRAM_bWE:STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal srcAdata : std_logic_vector(23 downto 0);
 begin
 uut: regBank port map(
     RA_addr => a_addr,
@@ -100,82 +103,120 @@ UUT2: BRAM_WRAPPER PORT MAP(
     BRAM_PORTB_0_dout =>bBRAM_DOUT,
     BRAM_PORTB_0_we =>BRAM_bWE
 );
+
 Process(CLK)
 begin
-clr<='0';
-rw_signal<='0';
+
+if (clk='1' and clk'event) then
+    
+    -- ensure writes are disabled
+    rw_signal<='0';
+    BRAM_aWE<="0";
+    BRAM_aEn<='1'; -- enable block RAM
+    
+    -- MMU Operations: MVS, MVMI, MMS, MSM
+    -- Addressing Modes:
+    --  00 --- Register direct - Use contents of register
+    --  01 --- Register indirect - Use contents of register as address into RAM
+    --  10 --- Register direct auto-increment - Use contents of register. Incrememnt register contents after completion
+    --  11 --- Register indirect auto-increment - Use contents of register as address into RAM. Increment memory contents after completion
 case OP_code is
-    when "01010" => --MVS
-        if(addr_modeA="00")then --reg direct mode (regBank)
+
+    when "01010" => --MVS ********************************************************************************************
+        
+        -- REG DIRECT
+        if(addr_modeA="00")then
+            --get regA contents
             a_addr<=srcA;
-            b_addr<=srcB;
             tog<= not tog;
-            -- contents of RegA saved in ra_dout
-            -- ignore rb_dout
+            srcAdata <= ra_dout;
             
-        else if (addr_modeA="01")then --reg indirect
-            BRAM_aWE<="1";
-            BRAM_aADDR<=srcA;
-            BRAM_bADDR<=srcB;
-        else if(addr_modeA="10")then --direct autoincrement
+       -- REG INDIRECT
+        elsif (addr_modeA="01")then
+            -- get regA contents
             a_addr<=srcA;
-            b_addr<=srcB;
+            tog<=not tog;
+            -- address into MMU
+            BRAM_aWE<="0"; -- disable write
+            BRAM_aAddr<= ra_dout(8 downto 0);
+            srcAdata<= aBRAM_dout;
+            
+        -- REG DIRECT AUTO-INCREMENT
+        elsif(addr_modeA="10")then
+            --get regA contents
+            a_addr<=srcA;
             tog<= not tog;
-            RA_DOUT <= std_logic_vector(to_unsigned(to_integer(unsigned(RA_DOUT )) + 1, 24)); 
-            a_addr<=srcA;
-            ra_din<=ra_dout;
+            srcAdata <= ra_dout;
+            -- Add one to register
             rw_signal<='1';
-            tog<= not tog; -- add 1 to regA
-            rw_signal<='0';
+            ra_din <= std_logic_vector(to_unsigned(to_integer(unsigned(ra_dout)) + 1, 24));
+            tog <= not tog; 
+            
+            
+        -- REG INDIRECT AUTO-INCREMENT
+        elsif(addr_modeA = "11") then 
+            -- get regA contents
             a_addr<=srcA;
-            b_addr<=srcB;
-            tog<= not tog;      
-        else if(addr_modeA = "11") then --indirect autoincrement
-            BRAM_aADDR<=srcA;
-            BRAM_bADDR<=srcB;
-            aBRAM_DOUT <= std_logic_vector(to_unsigned(to_integer(unsigned(aBRAM_DOUT )) + 1, 24)); 
-            BRAM_aADDR<=srcA;
-            aBRAM_din<=aBRAM_DOUT;
+            tog<=not tog;
+            -- address into MMU
+            BRAM_aWE<="0"; -- disable write
+            BRAM_aAddr<= ra_dout(8 downto 0);
+            srcAdata<= aBRAM_dout;
+            -- increment memory contents after completion
             BRAM_aWE<="1";
+            aBRAM_din<= std_logic_vector(to_unsigned(to_integer(unsigned(abram_dout)) + 1, 24));
             BRAM_aWE<="0";
-            BRAM_aADDR<=srcA;
-            BRAM_bADDR<=srcB;
         end if;
         
         
-        if(addr_modeB="00")then --reg direct mode
+        -- *** REGISTER B ***
+        -- REG DIRECT
+        if(addr_modeB="00")then
+            --overrite regB with srcAdata
             a_addr<=srcB;
-            rw_signal<='1';
-            ra_din <= ra_dout;
+            ra_din<=srcAdata;
             tog<= not tog;
-            -- Overwrite regB location with contents of regA
-        else if (addr_modeB="01")then --reg indirect
-            BRAM_aADDR<=srcB;
-            BRAM_aWE<="1";
-            aBRAM_DIN <= aBRAM_DOUT;
-        else if(addr_modeB="10")then --direct autoincrement
-            if (addr_modeA/="10") then
-            RA_DOUT <= std_logic_vector(to_unsigned(to_integer(unsigned(RA_DOUT )) + 1, 24)); 
-            end if;
+
+        -- REG INDIRECT
+        elsif (addr_modeB="01")then
+            --overwrite MEM[RegB] with srcAdata
+            -- get regB contents
             a_addr<=srcB;
-            rw_signal<='1';
-            ra_din <= ra_dout;
+            tog<=not tog;
+            -- address into MMU
+            BRAM_aWE<="1"; -- enable write
+            BRAM_aAddr<= ra_dout(8 downto 0); -- address using RegB contents
+            aBRAM_din <= srcAdata;
+            BRAM_aWE<="0";
+
+        -- REG DIRECT AUTO-INCREMENT
+        elsif(addr_modeB="10")then 
+            --overrite regB with srcAdata then add 1
+            a_addr<=srcB;
+            ra_din<=std_logic_vector(to_unsigned(to_integer(unsigned(srcAdata)) + 1, 24));
             tog<= not tog;
-        else if(addr_modeB = "11") then --indirect autoincrement
-            if (addr_modeA/="11") then
-            aBRAM_DOUT <= std_logic_vector(to_unsigned(to_integer(unsigned(aBRAM_DOUT )) + 1, 24)); 
-            end if;
-            BRAM_aADDR<=srcB;
-            BRAM_aWE<="1";
-            aBRAM_DIN <= aBRAM_DOUT;
+
+        -- REG INDIRECT AUTO-INCREMENT
+        elsif(addr_modeB = "11") then
+            --overwrite MEM[RegB] with srcAdata then add 1
+            -- get regB contents
+            a_addr<=srcB;
+            tog<=not tog;
+            -- address into MMU
+            BRAM_aWE<="1"; -- enable write
+            BRAM_aAddr<= ra_dout(8 downto 0); -- address using RegB contents
+            aBRAM_din <= std_logic_vector(to_unsigned(to_integer(unsigned(srcAdata)) + 1, 24));
+            BRAM_aWE<="0";
+        
         end if;
-    when "01011"=> --MVMI
+        
+        
+    when "01011"=> --MVMI ********************************************************************************************
     
-    when "01100" => --MSM
+    when "01100" => --MSM ********************************************************************************************
     
-    when "01101" => -- MMS
-    
+    when "01101" => -- MMS *******************************************************************************************
 end case;
-        
+end if;
 end process;
 end Behavioral;

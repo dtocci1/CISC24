@@ -1,0 +1,817 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 3104
+License: Customer
+
+Current time: 	Sat Apr 18 20:30:03 PDT 2020
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Available disk space: 650 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	dylma
+User home directory: C:/Users/dylma
+User working directory: C:/Users/dylma/Documents/GitHub/CISC24/CISC24
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/dylma/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/dylma/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/dylma/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/dylma/Documents/GitHub/CISC24/CISC24/vivado.log
+Vivado journal file location: 	C:/Users/dylma/Documents/GitHub/CISC24/CISC24/vivado.jou
+Engine tmp dir: 	C:/Users/dylma/Documents/GitHub/CISC24/CISC24/.Xil/Vivado-3104-DESKTOP-A6A5VAO
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	187 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 648 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\dylma\Documents\GitHub\CISC24\CISC24\CISC24.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 109 MB (+112222kb) [00:00:12]
+// [Engine Memory]: 723 MB (+606898kb) [00:00:12]
+// [GUI Memory]: 116 MB (+792kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  3463 ms.
+// Tcl Message: open_project C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/julia/Documents/GitHub/CISC24/CISC24' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 749 MB. GUI used memory: 54 MB. Current time: 4/18/20, 8:30:08 PM PDT
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 775.438 ; gain = 115.969 
+// Project name: CISC24; location: C:/Users/dylma/Documents/GitHub/CISC24/CISC24; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bB (cr)
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 765 MB (+5693kb) [00:00:31]
+// PAPropertyPanels.initPanels (ControlModule.vhd) elapsed time: 0.2s
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ControlModule(Behavioral) (ControlModule.vhd)]", 2, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BlockRAM_wrapper(STRUCTURE) (BlockRAM_wrapper.vhd)]", 8, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 4, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 4, true, false, false, false, true, false); // B (F, cr) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top regBank [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 17); // B (F, cr)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 18); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, TopLevel(Behavioral) (TopLevel.vhd)]", 34, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd)]", 31, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd)]", 31, true, false, false, false, true, false); // B (F, cr) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cr)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top regBank_tb [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// HMemoryUtils.trashcanNow. Engine heap size: 770 MB. GUI used memory: 55 MB. Current time: 4/18/20, 8:30:50 PM PDT
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'regBank_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj regBank_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'regBank' INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'reg_24bit' INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sim_1/new/regBank_tb.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'regBank_tb' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto ebc5f25f3b114c8a903ca0b7ed9e7c12 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot regBank_tb_behav xil_defaultlib.regBank_tb -log elaborate.log" 
+// Tcl Message:  ****** Webtalk v2019.2 (64-bit)   **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.  source C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/xsim.dir/regBank_tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-186] 'C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim/xsim.dir/regBank_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Apr 18 20:30:58 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html. INFO: [Common 17-206] Exiting Webtalk at Sat Apr 18 20:30:58 2020... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 792.180 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/dylma/Documents/GitHub/CISC24/CISC24/CISC24.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "regBank_tb_behav -key {Behavioral:sim_1:Functional:regBank_tb} -tclbatch {regBank_tb.tcl} -protoinst "protoinst_files/BlockRAM.protoinst" -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// [Engine Memory]: 816 MB (+13899kb) [00:01:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  1060 ms.
+// Tcl Message: INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/BlockRAM.protoinst 
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 11 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source regBank_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 823 MB. GUI used memory: 62 MB. Current time: 4/18/20, 8:31:02 PM PDT
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'regBank_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 838.535 ; gain = 48.992 
+// 'd' command handler elapsed time: 13 seconds
+dismissDialog("Run Simulation"); // e (cr)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E (f, cr)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// RDIResource.RDIViews_WAVEFORM_VIEWER: Untitled 1: close view
+// Elapsed time: 46 seconds
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // w
+selectTab((HResource) null, (HResource) null, "Sources", 1); // aL (aI, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, regBank(Behavioral) (regBank.vhd)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, MMU.vhd]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, MMU.vhd]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("MMU.vhd", 213, 76); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 311, 112); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 245, 42); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 286, 47); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 868, 42); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 377, 463); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 341, 454); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 346, 468); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 352, 483); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 350, 532); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 358, 522); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 356, 553); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 896, 461); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 861, 413); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 862, 433); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 867, 438); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 866, 453); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 838, 283); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 393, 181); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 391, 171); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 403, 186); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("MMU.vhd", 444, 93); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 381, 196); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 225, 174); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 205, 215); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 263, 278); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 479, 335); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 389, 232); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 247, 439); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 519, 483); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 296, 464); // ch (w, cr)
+// Elapsed time: 60 seconds
+selectCodeEditor("MMU.vhd", 259, 437); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 261, 355); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 391, 368); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 415, 302); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 420, 360); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 406, 363); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("MMU.vhd", 525, 269); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 565, 222); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 566, 213); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 272, 162); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 286, 139); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 299, 341); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 307, 377); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 315, 386); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 316, 352); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 315, 340); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 308, 331); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 315, 378); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 315, 387); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 366, 379); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 383, 388); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 356, 421); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 340, 436); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 317, 306); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 318, 272); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 320, 296); // ch (w, cr)
+// Elapsed time: 35 seconds
+selectCodeEditor("MMU.vhd", 144, 271); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 181, 267); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 141, 484); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 142, 499); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 169, 345); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 131, 501); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 168, 454); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 293, 267); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 270, 243); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 289, 355); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 289, 353); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("MMU.vhd", 171, 178); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 207, 155); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 231, 137); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 230, 147); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 241, 367); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 241, 367, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("MMU.vhd", 241, 367); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 11, 367); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 33, 368); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 29, 365); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 163, 447); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 26, 376); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("MMU.vhd", 220, 546); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("MMU.vhd", 205, 241); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 205, 227); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("MMU.vhd", 238, 144); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 239, 137); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 282, 404); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 288, 429); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 287, 413); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 236, 419); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 238, 453); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 250, 443); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 262, 419); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 288, 437); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 136, 304); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 136, 286); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 158, 293); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 284, 273); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 228, 440); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 236, 453); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 330, 280); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 300, 429); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 50, 360); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 76, 358); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 278, 434); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 381, 352); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 234, 318); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 268, 181); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 299, 86); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 456, 183); // ch (w, cr)
+// Elapsed time: 78 seconds
+selectCodeEditor("MMU.vhd", 134, 79); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 167, 129); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 267, 130); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 55, 123); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 174, 334); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 177, 497); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 167, 493); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 185, 468); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 202, 450); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 174, 308); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 169, 328); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 252, 365); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 260, 384); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 11, 416); // ch (w, cr)
+// [GUI Memory]: 122 MB (+381kb) [00:10:43]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BSrc_reg_Register(Behavioral) (BSrc_reg_Register.vhd)]", 6, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BSrc_reg_Register(Behavioral) (BSrc_reg_Register.vhd)]", 6, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ASrc_reg_Register(Behavioral) (ASrc_reg_Register.vhd)]", 5, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DST_ADDR_REGISTER(Behavioral) (DST_ADDR_REGISTER.vhd)]", 10, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InstructionRegister(Behavioral) (InstructionRegister.vhd)]", 11, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InstructionRegister(Behavioral) (InstructionRegister.vhd)]", 11, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InputReader(Behavioral) (InputReader.vhd)]", 14, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, InputReader(Behavioral) (InputReader.vhd)]", 14, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MMU.vhd", 0); // i (h, cr)
+selectCodeEditor("MMU.vhd", 48, 532); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 48, 527); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 43, 523); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 195, 346); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 240, 398); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 312, 469); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 91, 467); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 218, 454); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 95, 466); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 91, 482); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 81, 374); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 79, 227); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 77, 197); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 86, 439); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 89, 439, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("MMU.vhd", 89, 427); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 91, 420); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 89, 444); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 91, 451); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 99, 476); // ch (w, cr)
+// Elapsed time: 21 seconds
+selectCodeEditor("MMU.vhd", 50, 401); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 47, 430); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 43, 467); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 324, 457); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 44, 465); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 610, 410); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 435, 443); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 17, 461); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 27, 472); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 19, 471); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 632, 348); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 397, 388); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 374, 432); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 415, 474); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 436, 496); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 749, 543); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 197, 311); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 193, 301); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 242, 157); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 240, 151); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 172, 151); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 170, 160); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 157, 543); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 162, 262); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 159, 328); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 287, 365); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 199, 363); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 293, 378); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 88, 458); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 112, 537); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 118, 519); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 194, 385); // ch (w, cr)
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Elapsed time: 111 seconds
+selectCodeEditor("MMU.vhd", 328, 163); // ch (w, cr)
+// Elapsed time: 59 seconds
+selectCodeEditor("MMU.vhd", 363, 231); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 220, 184); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 169, 308); // ch (w, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("MMU.vhd", 396, 324); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 390, 378); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 392, 371); // ch (w, cr)
+// Elapsed time: 62 seconds
+selectCodeEditor("MMU.vhd", 212, 528); // ch (w, cr)
+// Elapsed time: 46 seconds
+selectCodeEditor("MMU.vhd", 350, 334); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 359, 314); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 344, 345); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 320, 364); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 326, 339); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 319, 353); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, BRAM_TB(Behavioral) (BRAM_TB.vhd)]", 25, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, BRAM_TB(Behavioral) (BRAM_TB.vhd)]", 25, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd)]", 22, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd)]", 22, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, MMU.vhd]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, MMU.vhd]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Elapsed time: 124 seconds
+selectCodeEditor("MMU.vhd", 170, 530); // ch (w, cr)
+// Elapsed time: 41 seconds
+selectCodeEditor("MMU.vhd", 165, 500); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 395, 500); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 253, 317); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 259, 339); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 263, 350); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 238, 408); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 479, 388); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 489, 404); // ch (w, cr)
+// Elapsed time: 31 seconds
+selectCodeEditor("MMU.vhd", 424, 483); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 319, 334); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 346, 377); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 330, 343); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 330, 357); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 318, 301); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 295, 313); // ch (w, cr)
+// Elapsed time: 20 seconds
+selectCodeEditor("MMU.vhd", 315, 445); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 312, 458); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 312, 475); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("MMU.vhd", 153, 104); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 154, 97); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 264, 97); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 205, 404); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 206, 413); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 363, 407); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 209, 170); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 200, 197); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 200, 210); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 222, 174); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 212, 212); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 230, 236); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 241, 239); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 244, 251); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 244, 259); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 246, 266); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 247, 272); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 263, 286); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 266, 290, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("MMU.vhd", 268, 287); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 265, 290); // ch (w, cr)
+// Elapsed time: 47 seconds
+selectCodeEditor("MMU.vhd", 238, 329); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 450, 488); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 450, 488, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("MMU.vhd", 451, 478); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 456, 465); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 343, 428); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 366, 200); // ch (w, cr)
+// Elapsed time: 60 seconds
+selectCodeEditor("MMU.vhd", 332, 189); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 245, 429); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 278, 477); // ch (w, cr)
+// Elapsed time: 23 seconds
+selectCodeEditor("MMU.vhd", 273, 485); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 298, 503); // ch (w, cr)
+// Elapsed time: 62 seconds
+selectCodeEditor("MMU.vhd", 698, 102); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 709, 87); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 311, 274); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 349, 170); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 302, 282); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 305, 350); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 306, 343); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 395, 336); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 558, 351); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 561, 352, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("MMU.vhd", 561, 346); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 572, 351); // ch (w, cr)
+// Elapsed time: 87 seconds
+selectCodeEditor("MMU.vhd", 664, 310); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 666, 296); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("MMU.vhd", 717, 321); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 747, 335); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 823 MB. GUI used memory: 64 MB. Current time: 4/18/20, 9:01:06 PM PDT
+// Elapsed time: 163 seconds
+selectCodeEditor("MMU.vhd", 621, 168); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 627, 186); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 636, 208); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 659, 232); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 663, 271); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 326, 196); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 324, 207); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 252, 481); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 159, 391); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 143, 395); // ch (w, cr)
+// Elapsed time: 39 seconds
+selectCodeEditor("MMU.vhd", 338, 507); // ch (w, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("MMU.vhd", 502, 226); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 503, 226, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("MMU.vhd", 506, 225); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 511, 244); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 515, 269); // ch (w, cr)
+// Elapsed time: 50 seconds
+selectCodeEditor("MMU.vhd", 698, 302); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 159, 540); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 252, 540); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 559, 539); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("MMU.vhd", 681, 551); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 711, 527); // ch (w, cr)
+// Elapsed time: 60 seconds
+selectCodeEditor("MMU.vhd", 419, 445); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 396, 375); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 396, 448); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, BRAM_TB(Behavioral) (BRAM_TB.vhd)]", 26, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, BRAM_TB(Behavioral) (BRAM_TB.vhd)]", 26, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+selectCodeEditor("BRAM_TB.vhd", 212, 405); // ch (w, cr)
+selectCodeEditor("BRAM_TB.vhd", 256, 422); // ch (w, cr)
+selectCodeEditor("BRAM_TB.vhd", 132, 422); // ch (w, cr)
+selectCodeEditor("BRAM_TB.vhd", 194, 452); // ch (w, cr)
+selectCodeEditor("BRAM_TB.vhd", 238, 467); // ch (w, cr)
+selectCodeEditor("BRAM_TB.vhd", 147, 475); // ch (w, cr)
+selectCodeEditor("BRAM_TB.vhd", 187, 477); // ch (w, cr)
+selectCodeEditor("BRAM_TB.vhd", 187, 477, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("BRAM_TB.vhd", 181, 473); // ch (w, cr)
+selectCodeEditor("BRAM_TB.vhd", 181, 473, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("BRAM_TB.vhd", 181, 473); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd), UUT : regBank(Behavioral) (regBank.vhd)]", 22, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, regBank_tb(Behavioral) (regBank_tb.vhd), UUT : regBank(Behavioral) (regBank.vhd)]", 22, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 20, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 20, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MMU(Behavioral) (MMU.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MMU(Behavioral) (MMU.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("MMU.vhd", 306, 499); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 170, 508); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 186, 517); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 413, 487); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("MMU.vhd", 508, 498); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 403, 270); // ch (w, cr)
+// Elapsed time: 149 seconds
+selectCodeEditor("MMU.vhd", 489, 237); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 473, 210); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 483, 235); // ch (w, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("MMU.vhd", 303, 419); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 314, 390); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 310, 424); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 322, 398); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 271, 225); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 229, 193); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 268, 145); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 263, 185); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 266, 203); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 251, 261); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 222, 364); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 233, 344); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 241, 350); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 243, 174); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 256, 172); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 226, 158); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 174, 344); // ch (w, cr)
+// Elapsed time: 44 seconds
+selectCodeEditor("MMU.vhd", 230, 468); // ch (w, cr)
+// Elapsed time: 29 seconds
+selectCodeEditor("MMU.vhd", 278, 269); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 282, 287); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 358, 359); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 200, 483); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 169, 443); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 169, 438); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 275, 460); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 243, 450); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 157, 430); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 170, 448); // ch (w, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("MMU.vhd", 209, 472); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 345, 461); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 407, 412); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 420, 430); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 432, 420); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 313, 436); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 497, 445); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 489, 424); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 497, 400); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 174, 410); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 169, 402); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 320, 398); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 217, 393); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 366, 428); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 506, 411); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 585, 423); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 580, 426); // ch (w, cr)
+// Elapsed time: 318 seconds
+selectCodeEditor("MMU.vhd", 262, 448); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 263, 457); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 252, 462); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 254, 525); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("MMU.vhd", 219, 246); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 289, 515); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 137, 497); // ch (w, cr)
+// Elapsed time: 16 seconds
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("MMU.vhd", 171, 57); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("MMU.vhd", 247, 404); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 248, 469); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 250, 459); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 216, 448); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 210, 446); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 200, 349); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 192, 346); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 195, 349); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 485, 352); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 600, 366); // ch (w, cr)
+// Elapsed time: 72 seconds
+selectCodeEditor("MMU.vhd", 317, 237); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 317, 247); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 370, 317); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 260, 247); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 163, 449); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 201, 248); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 328, 300); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 310, 269); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 404, 310); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 412, 300); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 381, 404); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 408, 427); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 389, 456); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 234, 505); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 622, 263); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 656, 262); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 144, 257); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 140, 259); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 311, 475); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 797, 477); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("MMU.vhd", 449, 338); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 407, 375); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 194, 324); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 194, 307); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 264, 325); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 294, 379); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 527, 258); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 506, 283); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 505, 298); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 506, 281); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 480, 314); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 490, 375); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 425, 294); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 425, 272); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 427, 264); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 46 seconds
+selectCodeEditor("MMU.vhd", 239, 338); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 231, 357); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 254, 365); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 265, 370); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 152, 149); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 166, 170); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 166, 174); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 171, 173); // ch (w, cr)
+// Elapsed time: 25 seconds
+selectCodeEditor("MMU.vhd", 224, 479); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 137, 456); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 31 seconds
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 86, 520); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 152, 509); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+// Elapsed time: 45 seconds
+selectCodeEditor("MMU.vhd", 337, 152); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 334, 142); // ch (w, cr)
+// Elapsed time: 26 seconds
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 83, 138); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 460, 200); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 474, 187); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 487, 174); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 331, 169); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 334, 176); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("MMU.vhd", 567, 164); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("MMU.vhd", 408, 202); // ch (w, cr)
+typeControlKey((HResource) null, "MMU.vhd", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("MMU.vhd", 751, 267); // ch (w, cr)
