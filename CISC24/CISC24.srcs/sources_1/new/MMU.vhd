@@ -119,11 +119,13 @@ if (clk='1' and clk'event) then
     --  00 --- Register direct - Use contents of register
     --  01 --- Register indirect - Use contents of register as address into RAM
     --  10 --- Register direct auto-increment - Use contents of register. Incrememnt register contents after completion
-    --  11 --- Register indirect auto-increment - Use contents of register as address into RAM. Increment memory contents after completion
+    --  11 --- Register indirect auto-increment - Use contents of register as address into RAM. Increment memory contents after completion  
 case OP_code is
 
     when "01010" => --MVS ********************************************************************************************
+                    -- Moves data between memory or data between memory locations
         
+        -- *** REGISTER A ***
         -- REG DIRECT
         if(addr_modeA="00")then
             --get regA contents
@@ -211,11 +213,90 @@ case OP_code is
         end if;
         
         
-    when "01011"=> --MVMI ********************************************************************************************
+    when "01011"=> -- MVMI ********************************************************************************************
+                   --  Explicity used to move data between two memory locations (zero operand instruction?)
+                   
+        -- *** REGISTER A ***
+        -- REG DIRECT
+        if(addr_modeA="00")then
+
+
+        -- REG INDIRECT
+        elsif (addr_modeA="01")then
+
+            
+        -- REG DIRECT AUTO-INCREMENT
+        elsif(addr_modeA="10")then
+            
+            
+        -- REG INDIRECT AUTO-INCREMENT
+        elsif(addr_modeA = "11") then 
+
+        end if;
+        
+        
+        -- *** REGISTER B ***
+        -- REG DIRECT
+        if(addr_modeB="00")then
+
+        -- REG INDIRECT
+        elsif (addr_modeB="01")then
+
+        -- REG DIRECT AUTO-INCREMENT
+        elsif(addr_modeB="10")then 
+
+        -- REG INDIRECT AUTO-INCREMENT
+        elsif(addr_modeB = "11") then
+        
+        end if; 
+                   
+                   
+                   
+    when "01100" => -- MSM ********************************************************************************************
+                    -- Moves data from a register A, to a memory location identified by the immediate data in the instruction. 
+                    -- The register is either register direct or can be register indirect.
+        -- *** REGISTER A ***
+        -- REG DIRECT
+        if(addr_modeA="00")then
+            -- Get regA contents
+            a_addr<=srcA;
+            tog<= not tog;
+            srcAdata <= ra_dout;
+            -- Store into specified location in RAM
+            BRAM_aWE <= "1"; -- enable write
+            BRAM_aADDR <= imm(8 downto 0);
+            aBRAM_din <= srcAdata;
+            BRAM_aWE<= "0";
+            
+        -- REG INDIRECT
+        elsif (addr_modeA="01")then
+            -- Get regA contents
+            a_addr<=srcA;
+            tog<= not tog;
+            -- Use as address into RAM
+            BRAM_aADDR <= ra_dout;
+            srcAdata<= aBRAM_dout; -- data in MEM[RegA]
+            -- Store into specified location in RAM
+            BRAM_aWE <= "1"; -- enable write
+            BRAM_aADDR <= imm(8 downto 0);
+            aBRAM_din <= srcAdata;
+            BRAM_aWE<= "0";
+            
+            
+        -- REG DIRECT AUTO-INCREMENT
+        elsif(addr_modeA="10")then
+            
+            
+        -- REG INDIRECT AUTO-INCREMENT
+        elsif(addr_modeA = "11") then 
+
+        end if;
+        
     
-    when "01100" => --MSM ********************************************************************************************
     
-    when "01101" => -- MMS *******************************************************************************************
+    when "01101" => -- MMS ********************************************************************************************
+                    -- Move data into Register A (based upon addressing mode) from memory location pointed to by the immediate address.
+    
 end case;
 end if;
 end process;
