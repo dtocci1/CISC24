@@ -39,13 +39,14 @@ entity MMU is
     Addr_modeA, addr_modeB: in std_logic_vector(1 downto 0);
     OP_code:in std_logic_vector (4 downto 0);
     srcA,srcB:in std_logic_vector(2 downto 0);
-    imm:in std_logic_vector(18 downto 0)
+    imm:in std_logic_vector(18 downto 0);
+    dFlag: out std_logic
   );
 end MMU;
 
 architecture Behavioral of MMU is
   
-component BRAM_wrapper is
+component BlockRAM_wrapper is
   Port (
     BRAM_PORTA_0_addr : in STD_LOGIC_VECTOR ( 8 downto 0 );
     BRAM_PORTA_0_clk : in STD_LOGIC;
@@ -90,7 +91,7 @@ uut: regBank port map(
     toggle => tog
 );
 
-UUT2: BRAM_WRAPPER PORT MAP(
+UUT2: BlockRAM_WRAPPER PORT MAP(
     BRAM_PORTA_0_addr => BRAM_aADDR,
     BRAM_PORTA_0_clk =>CLK,
     BRAM_PORTA_0_din =>aBRAM_DIN,
@@ -106,7 +107,7 @@ UUT2: BRAM_WRAPPER PORT MAP(
 
 Process(CLK)
 begin
-
+dflag<='0';
 if (clk='1' and clk'event) then
     
     -- ensure writes are disabled
@@ -132,7 +133,7 @@ case OP_code is
             a_addr<=srcA;
             tog<= not tog;
             srcAdata <= ra_dout;
-            
+    
        -- REG INDIRECT
         elsif (addr_modeA="01")then
             -- get regA contents
@@ -153,7 +154,7 @@ case OP_code is
             rw_signal<='1';
             ra_din <= std_logic_vector(to_unsigned(to_integer(unsigned(ra_dout)) + 1, 24));
             tog <= not tog; 
-            
+            rw_signal<='0';
             
         -- REG INDIRECT AUTO-INCREMENT
         elsif(addr_modeA = "11") then 
@@ -175,10 +176,12 @@ case OP_code is
         -- REG DIRECT
         if(addr_modeB="00")then
             --overrite regB with srcAdata
+            rw_signal<='1';
             a_addr<=srcB;
             ra_din<=srcAdata;
             tog<= not tog;
-
+            rw_signal<='0';
+            
         -- REG INDIRECT
         elsif (addr_modeB="01")then
             --overwrite MEM[RegB] with srcAdata
@@ -194,10 +197,12 @@ case OP_code is
         -- REG DIRECT AUTO-INCREMENT
         elsif(addr_modeB="10")then 
             --overrite regB with srcAdata then add 1
+            rw_signal<='1';
             a_addr<=srcB;
             ra_din<=std_logic_vector(to_unsigned(to_integer(unsigned(srcAdata)) + 1, 24));
             tog<= not tog;
-
+            rw_signal<='0';
+            
         -- REG INDIRECT AUTO-INCREMENT
         elsif(addr_modeB = "11") then
             --overwrite MEM[RegB] with srcAdata then add 1
@@ -215,9 +220,13 @@ case OP_code is
         
     when "01011"=> -- MVMI ********************************************************************************************
                    --  Explicity used to move data between two memory locations (zero operand instruction?)
-                   
-
-                   
+          
+         BRAM_aADDR<= imm(8 downto 0);
+         BRAM_bADDR<=imm(17 downto 9);
+         srcAdata<=bBram_dout;
+         BRAM_aWE<="1";
+         aBRAM_din<=srcAdata;      
+         BRAM_aWE<="0";          
                    
     when "01100" => -- MSM ********************************************************************************************
                     -- Moves data from a register A, to a memory location identified by the immediate data in the instruction. 
@@ -241,7 +250,7 @@ case OP_code is
             a_addr<=srcA;
             tog<= not tog;
             -- Use as address into RAM
-            BRAM_aADDR <= ra_dout;
+            BRAM_aADDR <= ra_dout(8 downto 0);
             srcAdata<= aBRAM_dout; -- data in MEM[RegA]
             -- Store into specified location in RAM
             BRAM_aWE <= "1"; -- enable write
@@ -270,14 +279,14 @@ case OP_code is
             a_addr<=srcA;
             tog<= not tog;
             -- Use as address into RAM
-            BRAM_aADDR <= ra_dout;
+            BRAM_aADDR <= ra_dout(8 downto 0);
             srcAdata<= aBRAM_dout; -- data in MEM[RegA]
             -- Store into specified location in RAM
             BRAM_aWE <= "1"; -- enable write
             BRAM_aADDR <= imm(8 downto 0);
             aBRAM_din <= srcAdata;
             BRAM_aWE<= "0";
-            BRAM_aAddr<=ra_dout;
+            BRAM_aAddr<=ra_dout(8 downto 0);
             BRAM_aWE<="1";
             aBRAM_din <= std_logic_vector(to_unsigned(to_integer(unsigned(srcAdata)) + 1, 24));      
             BRAM_aWE<="0";   
@@ -293,22 +302,46 @@ case OP_code is
             BRAM_aADDR<=imm(8 downto 0);
             srcAdata<=aBRAM_dout;
             a_addr<= srcA;
+            ra_din<=srcAdata;
+            rw_signal<='1';
+            tog<= not tog;
+            rw_signal<='0';
             
         -- REG INDIRECT
         elsif (addr_modeA="01")then
-            
-            
+            BRAM_aAddr<=imm(8 downto 0);
+            srcAdata<=aBram_dout;
+            a_addr <= srcA;
+            BRAM_aWE<="1";
+            BRAM_aAddr<=ra_dout(8 downto 0);
+            aBRAM_din<=srcAdata;
+            BRAM_aWE<="0";
             
         -- REG DIRECT AUTO-INCREMENT
         elsif(addr_modeA="10")then
-            
-
+            BRAM_aADDR<=imm(8 downto 0);
+            srcAdata<=aBRAM_dout;
+            a_addr<= srcA;
+            ra_din<=std_logic_vector(to_unsigned(to_integer(unsigned(srcAdata)) + 1, 24));    
+            rw_signal<='1';
+            tog<= not tog;
+            rw_signal<='0';
             
         -- REG INDIRECT AUTO-INCREMENT
         elsif(addr_modeA = "11") then 
-           
+            BRAM_aAddr<=imm(8 downto 0);
+            srcAdata<=aBram_dout;
+            a_addr <= srcA;
+            BRAM_aWE<="1";
+            BRAM_aAddr<=ra_dout(8 downto 0);
+            aBRAM_din<=std_logic_vector(to_unsigned(to_integer(unsigned(srcAdata)) + 1, 24));
+            BRAM_aWE<="0";
         end if;
+        
+   when others=>
+        
 end case;
+dflag<='1';
 end if;
 end process;
 end Behavioral;

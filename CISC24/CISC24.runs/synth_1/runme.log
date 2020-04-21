@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log ProgramCounter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ProgramCounter.tcl
+    with args -log MMU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MMU.tcl
 
 
 ****** Vivado v2019.2 (64-bit)
@@ -8,21 +8,67 @@
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source ProgramCounter.tcl -notrace
-Command: synth_design -top ProgramCounter -part xc7a100tcsg324-1
+source MMU.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top MMU -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11576 
+INFO: Helper process launched with PID 4748 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 966.203 ; gain = 234.238
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 863.531 ; gain = 234.281
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ProgramCounter' [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/ProgramCounter.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'ProgramCounter' (1#1) [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/ProgramCounter.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'MMU' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:47]
+INFO: [Synth 8-3491] module 'regBank' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:34' bound to instance 'uut' of component 'regBank' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'regBank' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:45]
+INFO: [Synth 8-3491] module 'reg_24bit' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:34' bound to instance 'reg0' of component 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'reg_24bit' (1#1) [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:44]
+INFO: [Synth 8-3491] module 'reg_24bit' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:34' bound to instance 'reg1' of component 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:65]
+INFO: [Synth 8-3491] module 'reg_24bit' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:34' bound to instance 'reg2' of component 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:72]
+INFO: [Synth 8-3491] module 'reg_24bit' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:34' bound to instance 'reg3' of component 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:79]
+INFO: [Synth 8-3491] module 'reg_24bit' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:34' bound to instance 'reg4' of component 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:86]
+INFO: [Synth 8-3491] module 'reg_24bit' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:34' bound to instance 'reg5' of component 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:93]
+INFO: [Synth 8-3491] module 'reg_24bit' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:34' bound to instance 'reg6' of component 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:100]
+INFO: [Synth 8-3491] module 'reg_24bit' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd:34' bound to instance 'reg7' of component 'reg_24bit' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:107]
+INFO: [Synth 8-226] default block is never used [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:118]
+INFO: [Synth 8-226] default block is never used [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:142]
+INFO: [Synth 8-226] default block is never used [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:164]
+WARNING: [Synth 8-614] signal 'RB_addr' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'regOutput0' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'regOutput1' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'regOutput2' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'regOutput3' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'regOutput4' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'regOutput5' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'regOutput6' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'regOutput7' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'RW' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+WARNING: [Synth 8-614] signal 'RA_addr' is read in the process but is not in the sensitivity list [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:115]
+INFO: [Synth 8-256] done synthesizing module 'regBank' (2#1) [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd:45]
+INFO: [Synth 8-3491] module 'BlockRAM_wrapper' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/imports/hdl/BlockRAM_wrapper.vhd:14' bound to instance 'UUT2' of component 'BlockRAM_wrapper' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'BlockRAM_wrapper' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/imports/hdl/BlockRAM_wrapper.vhd:30]
+INFO: [Synth 8-3491] module 'BlockRAM' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/bd/BlockRAM/synth/BlockRAM.vhd:14' bound to instance 'BlockRAM_i' of component 'BlockRAM' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/imports/hdl/BlockRAM_wrapper.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'BlockRAM' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/bd/BlockRAM/synth/BlockRAM.vhd:34]
+INFO: [Synth 8-3491] module 'BlockRAM_blk_mem_gen_0_0' declared at 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.runs/synth_1/.Xil/Vivado-16924-DESKTOP-U27BNUF/realtime/BlockRAM_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'BlockRAM_blk_mem_gen_0_0' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/bd/BlockRAM/synth/BlockRAM.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'BlockRAM_blk_mem_gen_0_0' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.runs/synth_1/.Xil/Vivado-16924-DESKTOP-U27BNUF/realtime/BlockRAM_blk_mem_gen_0_0_stub.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'BlockRAM' (3#1) [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/bd/BlockRAM/synth/BlockRAM.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'BlockRAM_wrapper' (4#1) [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/imports/hdl/BlockRAM_wrapper.vhd:30]
+INFO: [Synth 8-4471] merging register 'dFlag_reg' into 'BRAM_aEN_reg' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element dFlag_reg was removed.  [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:110]
+WARNING: [Synth 8-3848] Net bBRAM_DIN in module/entity MMU does not have driver. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:75]
+WARNING: [Synth 8-3848] Net clr in module/entity MMU does not have driver. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:76]
+WARNING: [Synth 8-3848] Net B_addr in module/entity MMU does not have driver. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:77]
+WARNING: [Synth 8-3848] Net BRAM_bWE in module/entity MMU does not have driver. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'MMU' (5#1) [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:47]
+WARNING: [Synth 8-3331] design regBank has unconnected port toggle
+WARNING: [Synth 8-3331] design MMU has unconnected port imm[18]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1038.387 ; gain = 306.422
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 938.480 ; gain = 309.230
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -35,94 +81,77 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1038.387 ; gain = 306.422
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 938.480 ; gain = 309.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1038.387 ; gain = 306.422
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 938.480 ; gain = 309.230
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.387 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 938.480 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'CA'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:60]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CB'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:61]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:61]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CC'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:62]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:62]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CD'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:63]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:63]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CE'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:64]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:64]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CF'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:65]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:65]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CG'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:66]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:66]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'DP'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:70]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:70]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:71]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:71]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:72]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:72]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:73]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:74]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:75]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:75]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:76]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:76]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:77]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:77]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ProgramCounter_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/ProgramCounter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/bd/BlockRAM/ip/BlockRAM_blk_mem_gen_0_0/BlockRAM_blk_mem_gen_0_0/BlockRAM_blk_mem_gen_0_0_in_context.xdc] for cell 'UUT2/BlockRAM_i/blk_mem_gen_0'
+Finished Parsing XDC File [c:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/bd/BlockRAM/ip/BlockRAM_blk_mem_gen_0_0/BlockRAM_blk_mem_gen_0_0/BlockRAM_blk_mem_gen_0_0_in_context.xdc] for cell 'UUT2/BlockRAM_i/blk_mem_gen_0'
+Parsing XDC File [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:8]
+WARNING: [Vivado 12-584] No ports matched 'CA'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'CB'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'CC'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'CD'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'CE'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'CF'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'CG'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'DP'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc:77]
+Finished Parsing XDC File [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/Nexys-4-DDR-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/MMU_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1099.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1031.090 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1099.906 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1031.090 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1099.906 ; gain = 367.941
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1031.090 ; gain = 401.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1099.906 ; gain = 367.941
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1031.090 ; gain = 401.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for UUT2/BlockRAM_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for UUT2/BlockRAM_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1099.906 ; gain = 367.941
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1031.090 ; gain = 401.840
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'BRAM_aWE_reg[0:0]' into 'rw_signal_reg' [C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd:100]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1099.906 ; gain = 367.941
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1031.090 ; gain = 401.840
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'uut/reg0' (reg_24bit) to 'uut/reg1'
+INFO: [Synth 8-223] decloning instance 'uut/reg0' (reg_24bit) to 'uut/reg2'
+INFO: [Synth 8-223] decloning instance 'uut/reg0' (reg_24bit) to 'uut/reg3'
+INFO: [Synth 8-223] decloning instance 'uut/reg0' (reg_24bit) to 'uut/reg4'
+INFO: [Synth 8-223] decloning instance 'uut/reg0' (reg_24bit) to 'uut/reg5'
+INFO: [Synth 8-223] decloning instance 'uut/reg0' (reg_24bit) to 'uut/reg6'
+INFO: [Synth 8-223] decloning instance 'uut/reg0' (reg_24bit) to 'uut/reg7'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -134,11 +163,22 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      8 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 3     
 +---Registers : 
-	                8 Bit    Registers := 2     
+	               24 Bit    Registers := 4     
+	                9 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 3     
+	   4 Input     24 Bit        Muxes := 3     
+	   5 Input     24 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 28    
+	   5 Input      1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -146,14 +186,33 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module ProgramCounter 
+Module MMU 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      8 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 3     
 +---Registers : 
-	                8 Bit    Registers := 2     
+	               24 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
+	   4 Input     24 Bit        Muxes := 3     
+	   5 Input     24 Bit        Muxes := 3     
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 28    
+	   5 Input      1 Bit        Muxes := 9     
+Module reg_24bit 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+Module regBank 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -170,8 +229,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design MMU has unconnected port imm[18]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (BRAM_aEN_reg)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1099.906 ; gain = 367.941
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1031.090 ; gain = 401.840
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -183,13 +244,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1113.836 ; gain = 381.871
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1031.090 ; gain = 401.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1123.570 ; gain = 391.605
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1031.090 ; gain = 401.840
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -201,7 +262,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1124.074 ; gain = 392.109
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1031.090 ; gain = 401.840
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -224,14 +285,39 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[23] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[22] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[21] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[20] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[19] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[18] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_din[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin UUT2/BlockRAM_i:BRAM_PORTB_0_we[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.895 ; gain = 407.930
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.402 ; gain = 416.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.895 ; gain = 407.930
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.402 ; gain = 416.152
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -250,79 +336,86 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.895 ; gain = 407.930
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.402 ; gain = 416.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.895 ; gain = 407.930
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.402 ; gain = 416.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.895 ; gain = 407.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.402 ; gain = 416.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.895 ; gain = 407.930
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.402 ; gain = 416.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+-------------------------+----------+
+|      |BlackBox name            |Instances |
++------+-------------------------+----------+
+|1     |BlockRAM_blk_mem_gen_0_0 |         1|
++------+-------------------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |BUFG |     1|
-|2     |LUT1 |     1|
-|3     |LUT2 |     3|
-|4     |LUT3 |    10|
-|5     |LUT4 |     1|
-|6     |LUT5 |     1|
-|7     |LUT6 |     2|
-|8     |FDRE |    16|
-|9     |IBUF |    12|
-|10    |OBUF |     8|
-+------+-----+------+
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |BlockRAM_blk_mem_gen_0_0_bbox_0 |     1|
+|2     |BUFG                            |     1|
+|3     |CARRY4                          |    12|
+|4     |LUT1                            |     2|
+|5     |LUT2                            |     1|
+|6     |LUT3                            |     1|
+|7     |LUT4                            |     3|
+|8     |LUT5                            |    34|
+|9     |LUT6                            |    28|
+|10    |FDRE                            |    66|
+|11    |IBUF                            |    28|
+|12    |OBUF                            |     1|
++------+--------------------------------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    55|
-+------+---------+-------+------+
++------+---------------+-----------------+------+
+|      |Instance       |Module           |Cells |
++------+---------------+-----------------+------+
+|1     |top            |                 |   225|
+|2     |  UUT2         |BlockRAM_wrapper |   103|
+|3     |    BlockRAM_i |BlockRAM         |    48|
++------+---------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.895 ; gain = 407.930
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.402 ; gain = 416.152
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1139.895 ; gain = 346.410
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1139.895 ; gain = 407.930
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1045.402 ; gain = 323.543
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.402 ; gain = 416.152
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1151.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1055.969 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1155.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1060.102 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-12 Infos, 16 Warnings, 16 Critical Warnings and 0 Errors encountered.
+50 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1155.652 ; gain = 729.535
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1155.652 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1060.102 ; gain = 721.262
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1060.102 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.runs/synth_1/ProgramCounter.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file ProgramCounter_utilization_synth.rpt -pb ProgramCounter_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 11 12:36:21 2020...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.runs/synth_1/MMU.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MMU_utilization_synth.rpt -pb MMU_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 21 15:02:35 2020...

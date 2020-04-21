@@ -143,7 +143,16 @@ component ProgramCounter is
     PC : out std_logic_vector(7 downto 0) --256 bit PC
    );
 end component;
-
+component MMU is
+  Port ( 
+    clk: in std_logic;
+    Addr_modeA, addr_modeB: in std_logic_vector(1 downto 0);
+    OP_code:in std_logic_vector (4 downto 0);
+    srcA,srcB:in std_logic_vector(2 downto 0);
+    imm:in std_logic_vector(18 downto 0);
+    dFlag: out std_logic
+  );
+end component;
 -- Main component signals
 signal clear, toggle, carryFlag, clockCycleFlag, jumpFlag : std_logic;
 signal AddressModeA, AddressModeB : std_logic_vector(1 downto 0);

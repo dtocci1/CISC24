@@ -45,10 +45,12 @@ architecture Behavioral of reg_24bit is
 begin
     process(clk) -- update when ENABLE or CLR
     begin
-        if (clr = '1' and clk ='1' and clk'event) then
-            Q_OUT <= "000000000000000000000000";
-        elsif (enable = '1' and clk='1' and clk'event) then
-            Q_OUT <= D_IN;
+        if (clk ='1' and clk'event) then
+            if(clr='1') then
+                Q_OUT <= "000000000000000000000000";
+            elsif(enable='1')then
+                Q_OUT <= D_IN;
+            end if;       
         end if;
     end process;
 end Behavioral;

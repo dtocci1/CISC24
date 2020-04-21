@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/dylma/OneDrive/Documents/UMD 2019-2020 Spring/ECE 368/CISC24/CISC24/CISC24.runs/synth_1'
+HD_PWD='C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ProgramCounter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ProgramCounter.tcl
+EAStep vivado -log MMU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MMU.tcl
