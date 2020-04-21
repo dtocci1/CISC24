@@ -50,6 +50,7 @@ begin
     if(CLK' event and clk='1')then
         op_code<=instruct(23 downto 19);
         OPC<=INSTRUCT(23 DOWNTO 19);
+        
         -- ZERO OPERAND
         IF (OPC="00000") THEN
             --HALT
@@ -58,23 +59,26 @@ begin
             SRCA<="ZZZ";
             SRCB<="ZZZ";
             IMM<="ZZZZZZZZZZZZZZZZZZZ";
+            
         -- ONE OPERAND
-        ELSIF((OPC<"01010" or OPC > "10110")AND OPC /= "01011")THEN
-        -- CLR,INC,DEC,NEG
+        ELSIF(OPC<"01010" or OPC = "01100" OR OPC = "01101" or OPC > "10110")THEN
+        -- CLR,INC,DEC,NEG, MSM, MMS, ADDI, SUBI
             ADDR_MODEA<=INSTRUCT(18 DOWNTO 17);
             ADDR_MODEB<="ZZ";
             SRCA<=INSTRUCT(16 DOWNTO 14);
             SRCB<="ZZZ";
             IMM<="00000"&INSTRUCT(13 DOWNTO 0);
+            
         ELSIF(OPC="01011") THEN     --MVMI
             ADDR_MODEA<="ZZ";
             ADDR_MODEB<="ZZ";
             SRCA<="ZZZ";
             SRCB<="ZZZ";
             IMM<=INSTRUCT(18 downto 0);
+            
         -- TWO OPERAND
         ELSE
-        --THE REST
+        -- SUB, MUL, DIV, AND, OR, XOR
             ADDR_MODEA<=INSTRUCT(18 DOWNTO 17);
             ADDR_MODEB<=INSTRUCT(13 DOWNTO 12);
             SRCA<=INSTRUCT(16 DOWNTO 14);

@@ -216,40 +216,7 @@ case OP_code is
     when "01011"=> -- MVMI ********************************************************************************************
                    --  Explicity used to move data between two memory locations (zero operand instruction?)
                    
-        -- *** REGISTER A ***
-        -- REG DIRECT
-        if(addr_modeA="00")then
 
-
-        -- REG INDIRECT
-        elsif (addr_modeA="01")then
-
-            
-        -- REG DIRECT AUTO-INCREMENT
-        elsif(addr_modeA="10")then
-            
-            
-        -- REG INDIRECT AUTO-INCREMENT
-        elsif(addr_modeA = "11") then 
-
-        end if;
-        
-        
-        -- *** REGISTER B ***
-        -- REG DIRECT
-        if(addr_modeB="00")then
-
-        -- REG INDIRECT
-        elsif (addr_modeB="01")then
-
-        -- REG DIRECT AUTO-INCREMENT
-        elsif(addr_modeB="10")then 
-
-        -- REG INDIRECT AUTO-INCREMENT
-        elsif(addr_modeB = "11") then
-        
-        end if; 
-                   
                    
                    
     when "01100" => -- MSM ********************************************************************************************
