@@ -285,18 +285,62 @@ case OP_code is
             
         -- REG DIRECT AUTO-INCREMENT
         elsif(addr_modeA="10")then
-            
+            -- Get regA contents
+            a_addr<=srcA;
+            tog<= not tog;
+            srcAdata <= ra_dout;
+            -- Store into specified location in RAM
+            BRAM_aWE <= "1"; -- enable write
+            BRAM_aADDR <= imm(8 downto 0);
+            aBRAM_din <= srcAdata;
+            BRAM_aWE<= "0";
+            ra_din <= std_logic_vector(to_unsigned(to_integer(unsigned(srcAdata)) + 1, 24));
+            tog<=not tog;
             
         -- REG INDIRECT AUTO-INCREMENT
         elsif(addr_modeA = "11") then 
-
+            -- Get regA contents
+            a_addr<=srcA;
+            tog<= not tog;
+            -- Use as address into RAM
+            BRAM_aADDR <= ra_dout;
+            srcAdata<= aBRAM_dout; -- data in MEM[RegA]
+            -- Store into specified location in RAM
+            BRAM_aWE <= "1"; -- enable write
+            BRAM_aADDR <= imm(8 downto 0);
+            aBRAM_din <= srcAdata;
+            BRAM_aWE<= "0";
+            BRAM_aAddr<=ra_dout;
+            BRAM_aWE<="1";
+            aBRAM_din <= std_logic_vector(to_unsigned(to_integer(unsigned(srcAdata)) + 1, 24));      
+            BRAM_aWE<="0";   
         end if;
         
     
     
     when "01101" => -- MMS ********************************************************************************************
                     -- Move data into Register A (based upon addressing mode) from memory location pointed to by the immediate address.
-    
+        -- *** REGISTER A ***
+        -- REG DIRECT
+        if(addr_modeA="00")then
+            BRAM_aADDR<=imm(8 downto 0);
+            srcAdata<=aBRAM_dout;
+            a_addr<= srcA;
+            
+        -- REG INDIRECT
+        elsif (addr_modeA="01")then
+            
+            
+            
+        -- REG DIRECT AUTO-INCREMENT
+        elsif(addr_modeA="10")then
+            
+
+            
+        -- REG INDIRECT AUTO-INCREMENT
+        elsif(addr_modeA = "11") then 
+           
+        end if;
 end case;
 end if;
 end process;

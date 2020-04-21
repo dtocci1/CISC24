@@ -59,13 +59,19 @@ begin
             SRCB<="ZZZ";
             IMM<="ZZZZZZZZZZZZZZZZZZZ";
         -- ONE OPERAND
-        ELSIF(OPC<"01010" or OPC > "10110")THEN
+        ELSIF((OPC<"01010" or OPC > "10110")AND OPC /= "01011")THEN
         -- CLR,INC,DEC,NEG
             ADDR_MODEA<=INSTRUCT(18 DOWNTO 17);
             ADDR_MODEB<="ZZ";
             SRCA<=INSTRUCT(16 DOWNTO 14);
             SRCB<="ZZZ";
             IMM<="00000"&INSTRUCT(13 DOWNTO 0);
+        ELSIF(OPC="01011") THEN     --MVMI
+            ADDR_MODEA<="ZZ";
+            ADDR_MODEB<="ZZ";
+            SRCA<="ZZZ";
+            SRCB<="ZZZ";
+            IMM<=INSTRUCT(18 downto 0);
         -- TWO OPERAND
         ELSE
         --THE REST
