@@ -115,6 +115,11 @@ if (clk='1' and clk'event) then
     BRAM_aWE<="0";
     BRAM_aEn<='1'; -- enable block RAM
     
+    --store command for ALU
+    
+    
+    
+    
     -- MMU Operations: MVS, MVMI, MMS, MSM
     -- Addressing Modes:
     --  00 --- Register direct - Use contents of register

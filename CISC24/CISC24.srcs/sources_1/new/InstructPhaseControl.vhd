@@ -35,14 +35,15 @@ entity InstructPhaseControl is
   Port ( 
   CLK : in std_logic;
   RST : in std_logic;
+  nextFlag : in std_logic;
   opcode : in std_logic_vector(4 downto 0);
-  output : out std_logic_vector (3 downto 0)
+  output : out std_logic_vector (2 downto 0)
   );
 end InstructPhaseControl;
 
 architecture Behavioral of InstructPhaseControl is
 
-    TYPE STATE_TYPE IS (S0, S1, S2, S3, S4, S5, S6, S7, S8);
+    TYPE STATE_TYPE IS (S0, S1, S2, S3, S4, S5, S6);
     SIGNAL CURRENT_STATE, NEXT_STATE: STATE_TYPE;
 
     BEGIN
@@ -51,47 +52,41 @@ architecture Behavioral of InstructPhaseControl is
         BEGIN
             CASE CURRENT_STATE IS
                 WHEN S0 => --FETCH
-                    output<="0000";
+                    output<="000";
                     NEXT_STATE<= S1;
                 WHEN S1 => --DECODE
-                   output<="0001";
+                   output<="001";
                    NEXT_STATE<=S2;
                 WHEN S2 =>
                     IF ((opcode >"01001") AND (OPCODE < "01110")) THEN --meM
-                        OUTPUT <="0010";
-                        NEXT_STATE <= S6;
+                        OUTPUT <="010"; -- EXEC OFFSET
+                        NEXT_STATE <= S5;
                     ELSE
-                        OUTPUT<="0011";
+                        OUTPUT<="011"; -- OPERAND
                         NEXT_STATE <= S3;
                     END IF;
-               WHEn S3=> --oprnd
-                    OUTPUT<="0100";
+               WHEn S3=> -- EXEC ALU
+                    OUTPUT<="100";
                     NEXT_STATE <= S4;
-               WHEN S4 => --exec alu
-                    OUTPUT<="0101";
-                    NEXT_STATE<= S5;
-               WHEN S5=> --write reg
-                    OUTPUT<="0110";
+               WHEN S4 => --WRITE REG
+                    OUTPUT<="101";
                     NEXT_STATE<= S0;
-               WHEN S6=> --exec offset
-                    OUTPUT<="0111";
-                    NEXT_STATE<= S7;
-               WHEN S7=> --mem READ
-                    OUTPUT<="1000";
-                    NEXT_STATE<= S8;
-               WHEN S8=> --wRITE REG
-                    OUTPUT<="1001";
-                    NEXT_STATE<= S0;  
+               WHEN S5=> -- MEM READ
+                    OUTPUT<="110";
+                    NEXT_STATE<= S0;
+               WHEN S6=> -- WRITE REG
+                    OUTPUT<="111";
+                    NEXT_STATE<= S0;
+
             END CASE;
         END PROCESS COMBIN;
 
         -- Process to hold synchronous elements (flip-flops)
-        SYNCH: PROCESS(CLK,RST)
+        SYNCH: PROCESS(nextFlag,RST)
         BEGIN
+        CURRENT_STATE <= NEXT_STATE;
             IF (RST='1') THEN
                     CURRENT_STATE <= S0;
-            ELSIF (CLK'EVENT AND CLK = '1') THEN
-                    CURRENT_STATE <= NEXT_STATE;
             END IF;
         END PROCESS SYNCH;
 
