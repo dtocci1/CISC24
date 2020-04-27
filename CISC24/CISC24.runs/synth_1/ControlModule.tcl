@@ -42,7 +42,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/InstructionRegister.vhd
   C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/MMU.vhd
   C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/ProgramCounter.vhd
-  C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/key2instruction.vhd
+  C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/programMemory.vhd
+  C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/imports/new/readInput.vhd
   C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/regBank.vhd
   C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/reg_24bit.vhd
   C:/Users/julia/Documents/GitHub/CISC24/CISC24/CISC24.srcs/sources_1/new/ControlModule.vhd

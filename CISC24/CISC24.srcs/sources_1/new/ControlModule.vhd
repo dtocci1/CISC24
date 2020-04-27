@@ -34,12 +34,35 @@ use IEEE.NUMERIC_STD.ALL;
 entity ControlModule is
   Port ( 
     clk,rst : in std_logic;
-    led0 : out std_logic
+    sw : in std_logic_vector(15 downto 0);
+    led : out std_logic_vector(4 downto 0):="00000"
   );
 end ControlModule;
 
 architecture Behavioral of ControlModule is
 
+component programMemory is
+    Port ( clk : in std_logic;
+           ready : in std_logic;
+           addr: in std_logic_vector(4 downto 0);  --
+           din : in std_logic_vector(23 downto 0);
+           read_Address : in std_logic_vector(4 downto 0);
+           dout : out std_logic_vector(23 downto 0) ;
+           fullFlag : out std_logic
+            );
+end component;
+
+component ReadInput is
+ Port (
+    clk, rst : std_logic;
+    enter : in std_logic;
+    sw : in std_logic_vector(14 downto 0);
+    ready : out std_logic :='0'; --if instruction is full and ready to be moved
+    LED: out std_logic_vector (4 downto 0) := "00000";
+    instruct_out : out std_logic_vector(23 downto 0);
+    addr_out : out std_logic_vector(4 downto 0)
+  );
+end component;
 component InstructPhaseControl is
   Port ( 
   CLK : in std_logic;
@@ -149,13 +172,7 @@ component MMU is
     dFlag: out std_logic
   );
   end component;
-  
-component key2instruction is
-  Port (
-    clk,rst : in std_logic;
-    instruction_out : out std_logic_vector(23 downto 0)
-   );
-end component;
+
 
 component BlockRAM is
   port (
@@ -194,10 +211,31 @@ signal RamA_Din, RamA_dout, RamB_din, RamB_dout : std_logic_vector(23 downto 0) 
 signal RamA_addr, RamB_addr : std_logic_vector(8 downto 0) := "000000000";
 signal RamA_we, RamA_en, RamB_en : std_logic := '1';
 signal doneFlag : std_logic;
-
-
+signal readyFlag, progMemFullFlag:std_logic;
+signal instruct_input : std_logic_vector (23 downto 0);
+signal progMem_addr, readAddr : std_logic_vector(4 downto 0);
 begin
 
+progMem: programMemory Port Map ( 
+           clk =>clk,
+           ready => readyFlag,
+           addr=>progMem_addr,
+           din =>instruct_input,
+           read_address=>readAddr,
+           dout => instruction,
+           fullFlag=>progMemFullFlag         
+            );
+            
+input : readinput  Port Map(
+    clk=>clk, 
+    rst=>rst,  
+    enter => sw(15),
+    sw => sw(14 downto 0),
+    ready=> readyFlag,
+    LED=>LED,
+    instruct_out=> instruct_input,
+    addr_out => progMem_addr
+  );
 pCount : programCounter PORT MAP(
     CLK =>clk,
     RST =>rst,
@@ -298,12 +336,6 @@ inst_register : InstructionRegister port map (
     Data_out =>instruction_reg_out
 );
 
-assemblerz: key2instruction port map (
-    clk => clk,
-    rst => rst,
-    instruction_out => instruction
-    );
-
 BlockRAM_i: component BlockRAM
      port map (
       BRAM_PORTA_0_addr(8 downto 0) => RamA_addr ,
@@ -324,12 +356,16 @@ BlockRAM_i: component BlockRAM
 process (clk, rst)
 begin
 if(clk'event and clk='1') then
-    case FSMOUT is
-        
+  
+  if(progMemFullFlag /= '1')then  
+    --do nothing, wait for program memory to be full of 32 instructions
+  else 
+    case FSMOUT is   
         when "000" => -- FETCH
             clockCycleFlag<='0';
             instruction_reg_enable <= '1';
             --port maped to decoder
+            readAddr<=programCount(4 downto 0);
             nextFlag <= not nextFlag;
             
         when "001" => -- DECODE
@@ -400,6 +436,7 @@ if(clk'event and clk='1') then
             nextFlag <= not nextFlag;
             clockCycleFlag<='1';
     END CASE;
+end if;
 
 end if;
 end process;

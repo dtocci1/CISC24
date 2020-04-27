@@ -133,8 +133,16 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/key2instruction.vhd">
+      <File Path="$PSRCDIR/sources_1/new/programMemory.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/readInput.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../readInput/readInput.srcs/sources_1/new/readInput.vhd"/>
+          <Attr Name="ImportTime" Val="1587948865"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -158,13 +166,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/DST_ADDR_REGISTER.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/TopLevel.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
