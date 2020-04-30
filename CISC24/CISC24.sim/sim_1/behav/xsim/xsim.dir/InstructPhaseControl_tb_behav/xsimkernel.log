@@ -1,7 +1,7 @@
-Running: xsim.dir/InstructPhaseControl_tb_behav/xsimk.exe -simmode gui -wdb InstructPhaseControl_tb_behav.wdb -simrunnum 0 -socket 58547
+Running: xsim.dir/InstructPhaseControl_tb_behav/xsimk.exe -simmode gui -wdb InstructPhaseControl_tb_behav.wdb -simrunnum 0 -socket 53493
 Design successfully loaded
-Design Loading Memory Usage: 5220 KB (Peak: 5220 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 5268 KB (Peak: 5268 KB)
+Design Loading CPU Usage: 31 ms
 Simulation completed
-Simulation Memory Usage: 5792 KB (Peak: 5792 KB)
-Simulation CPU Usage: 30 ms
+Simulation Memory Usage: 5836 KB (Peak: 5836 KB)
+Simulation CPU Usage: 31 ms

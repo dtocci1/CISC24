@@ -41,19 +41,22 @@ component InstructPhaseControl is
   CLK : in std_logic;
   RST : in std_logic;
   opcode : in std_logic_vector(4 downto 0);
-  output : out std_logic_vector (3 downto 0)
+  output : out std_logic_vector (2 downto 0);
+  nextFlag : in std_logic
   );
 end component;
 constant period : time := 10 ns;
 signal clk_test, rst_test: std_logic;
-signal opcode_test: std_logic_vector(4 downto 0);
-signal output_test: std_logic_vector( 3 downto 0);
+signal opcode_test: std_logic_vector(4 downto 0) := "01011";
+signal output_test: std_logic_vector(2 downto 0);
+signal nextFlag_test : std_logic := '1';
 begin
 UUT: InstructPhaseControl port map (
 clk=> clk_test,
 rst=>rst_test,
 opcode=>opcode_test,
-output=>output_test
+output=>output_test,
+nextFlag=>nextFlag_test
 );
 CLK_process : process
     begin
@@ -64,7 +67,26 @@ CLK_process : process
     
  tb : process
     begin
-
-    
+        nextFlag_test<='1';
+        wait for 20ns;
+        nextFlag_test<='0';
+        wait for 20ns;
+        nextFlag_test<='1';
+        wait for 20ns;
+        nextFlag_test<='0';
+        wait for 20ns;
+        nextFlag_test<='1';
+        wait for 20ns;
+        nextFlag_test<='0';
+        wait for 20ns;
+        nextFlag_test<='1';
+        wait for 20ns;
+        nextFlag_test<='0';
+        wait for 20ns;
+        nextFlag_test<='1';
+        wait for 20ns;
+        nextFlag_test<='0';
+        wait for 20ns;
+        
     end process;
 end Behavioral;

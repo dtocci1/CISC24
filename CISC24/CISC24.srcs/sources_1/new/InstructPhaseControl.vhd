@@ -73,7 +73,7 @@ architecture Behavioral of InstructPhaseControl is
                     NEXT_STATE<= S0;
                WHEN S5=> -- MEM READ
                     OUTPUT<="110";
-                    NEXT_STATE<= S0;
+                    NEXT_STATE<= S6;
                WHEN S6=> -- WRITE REG
                     OUTPUT<="111";
                     NEXT_STATE<= S0;
